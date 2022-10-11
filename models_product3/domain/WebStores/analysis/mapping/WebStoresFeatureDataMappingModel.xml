@@ -1,0 +1,20 @@
+<mapping>
+  <table feature="BasicFrontEndDefinitions" name="Customer"/>
+  <attribute feature="BasicFrontEndDefinitions" name="customerName"/>
+  <attribute feature="BasicFrontEndDefinitions" name="customerAddress"/>
+  <attribute feature="BasicFrontEndDefinitions" name="customerMail"/>
+  <table feature="ProductManagement" name="Product"/>
+  <attribute feature="ProductManagement" name="productName"/>
+  <attribute feature="ProductManagement" name="productDescription"/>
+  <attribute feature="ProductManagement" name="productPrice"/>
+  <table feature="BasicFrontEndDefinitions" name="Order"/>
+  <table feature="BasicBackEndDefinitions" name="Seller"/>
+  <attribute feature="BasicBackEndDefinitions" name="sellerName"/>
+  <attribute feature="BasicBackEndDefinitions" name="sellerAddress"/>
+  <attribute feature="BasicBackEndDefinitions" name="sellerMail"/>
+  <table feature="BasicPaymentDefinitions" name="Payment"/>
+  <attribute feature="BasicPaymentDefinitions" name="paymentType"/>
+  <attribute feature="BasicPaymentDefinitions" name="paymentStatus"/>
+  <table feature="CategoryManagement" name="Category"/>
+  <attribute feature="CategoryManagement" name="categoryName"/>
+</mapping>

@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+<div id="all">
+
+<div id="header">
+<table>
+	<tr>
+		<td id="header_top_1"></td>
+		<td id="header_top_2"></td>
+		<td id="header_top_3"></td>
+	</tr>
+	<tr>
+		<td colspan="3" id="header_bottom"></td>
+	</tr>
+</table>
+</div>
+
+<div id="main">
+	<div id="column1"></div>
+	<div id="column2">
+		<table>
+			<tr>
+				<td id="content_1"></td>
+			</tr>
+			<tr>
+				<td id="content_2"></td>
+			</tr>
+				<tr>
+				<td id="content_3"></td>
+			</tr>
+    </table>
+	</div>
+	<div id="column3"></div>
+</div>
+
+<div id="footer"></div>
+
+</div>
+</body>
+</html>

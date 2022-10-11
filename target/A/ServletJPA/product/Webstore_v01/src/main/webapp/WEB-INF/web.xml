@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns:w="http://java.sun.com/xml/ns/j2ee">
+  <display-name>webstore_v01</display-name>
+ 	<servlet>
+		<servlet-name>ControllerServlet</servlet-name>
+		<servlet-class>controller.ControllerServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ControllerServlet</servlet-name>
+		<url-pattern>exe.cute</url-pattern>
+	</servlet-mapping>
+</web-app>

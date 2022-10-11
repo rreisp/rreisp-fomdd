@@ -1,0 +1,17 @@
+
+layer modelPayment;
+
+refines class Order {
+
+	@OneToOne(mappedBy=Payment.Attribute.ORDER)
+	private Payment orderPayment;
+		
+	public Payment getOrderPayment() { 	
+		return this.orderPayment;
+	}
+	
+	public void setOrderPayment(Payment orderPayment) {	
+		this.orderPayment = orderPayment;
+	}
+	
+}

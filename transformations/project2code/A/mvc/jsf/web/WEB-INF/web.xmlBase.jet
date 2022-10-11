@@ -1,0 +1,32 @@
+<%@ jet package="cartridge.A.jee.jsf.web.webinf" class="WebXMLBase" imports="java.util.Vector core.mvc.model.* core.mvc.view.*" %>
+<%
+	String productName = (String) ((Object[])argument)[0];
+	Vector<Model> models = (Vector<Model>) ((Object[])argument)[1];
+	Vector<Facade> facades = (Vector<Facade>) ((Object[])argument)[2];
+
+%>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns:w="http://java.sun.com/xml/ns/j2ee">
+  <display-name><%= productName.toLowerCase() %></display-name>
+<% if (!facades.isEmpty()) { %>
+    <% for (Facade f : facades) { 	%>
+    <listener>
+    	<listener-class>model.<%= f.getName() %></listener-class>
+    </listener>
+ <% }  } %>
+ <% if (!models.isEmpty()) { %>
+    <% for (Model m : models) { 	%>
+    <listener>
+    	<listener-class>model.<%= m.getName()%>Repository</listener-class>
+    </listener>
+ <% }  } %>
+ 	<servlet>
+		<servlet-name>ControllerServlet</servlet-name>
+		<servlet-class>controller.ControllerServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ControllerServlet</servlet-name>
+		<url-pattern>exe.cute</url-pattern>
+	</servlet-mapping>
+</web-app>

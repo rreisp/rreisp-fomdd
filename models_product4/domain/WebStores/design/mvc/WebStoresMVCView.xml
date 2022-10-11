@@ -1,0 +1,282 @@
+<views>
+  <screen feature="BasicFrontEndDefinitions" layout="1ColumnC" name="Catalog">
+    <element at="header1" depth="0" feature="StaticContent" name="Catalog.Default.HeaderLink" type="ImageLink">
+      <transition feature="StaticContent" name="" source="Catalog.Default.HeaderLink" target="Home.Default"/>
+    </element>
+    <element at="header2" depth="0" feature="StaticContent" name="Catalog.Default.HeaderTitle" type="FreeText"/>
+    <element at="bottom" depth="0" feature="StaticContent" name="Catalog.Default.Footer" type="FreeText"/>
+    <element at="header3" depth="0" feature="StaticContent" name="Catalog.Default.MainMenu" type="HorizontalList">
+      <element at="Catalog.Default.MainMenu" depth="1" feature="StaticContent" name="Catalog.Default.MainMenu.Item1" type="ListItem">
+        <element at="Catalog.Default.MainMenu.Item1" depth="2" feature="StaticContent" name="Catalog.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+        </element>
+      </element>
+      <element at="Catalog.Default.MainMenu" depth="1" feature="StaticContent" name="Catalog.Default.MainMenu.Item2" type="ListItem">
+        <element at="Catalog.Default.MainMenu.Item2" depth="2" feature="StaticContent" name="Catalog.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+        </element>
+      </element>
+      <element at="Catalog.Default.MainMenu" depth="1" feature="StaticContent" name="Catalog.Default.MainMenu.Item3" type="ListItem">
+        <element at="Catalog.Default.MainMenu.Item3" depth="2" feature="StaticContent" name="Catalog.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+        </element>
+      </element>
+    </element>
+    <element at="section1" depth="0" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogTitle" type="FreeText"/>
+    <element at="section2" depth="0" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm" type="Form">
+      <element at="Catalog.Default.CatalogForm" depth="1" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1" type="FormItem">
+        <element at="Catalog.Default.CatalogForm.Item1" depth="2" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable" type="Table">
+          <element at="Catalog.Default.CatalogForm.Item1.ProductTable" depth="3" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" type="TableRow">
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1" type="TableHeader">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1.ImageHeader" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2" type="TableHeader">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2.NameHeader" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3" type="TableHeader">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3.DescriptionHeader" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4" type="TableHeader">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4.PriceHeader" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5" type="TableHeader">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5.BuyHeader" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" depth="4" feature="CategoryManagement" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header6" type="TableHeader">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header6" depth="5" feature="CategoryManagement" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header6.CategoryHeader" type="FreeText"/>
+            </element>
+          </element>
+          <element at="Catalog.Default.CatalogForm.Item1.ProductTable" depth="3" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" type="DynamicRowSet">
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1" type="TableColumn">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1.ImageItem" type="SimpleImage"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2" type="TableColumn">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2.NameItem" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3" type="TableColumn">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3.DescriptionItem" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4" type="TableColumn">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4.PriceItem" type="FreeText"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" depth="4" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5" type="TableColumn">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5" depth="5" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5.BuyItem" type="CheckBox"/>
+            </element>
+            <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" depth="4" feature="CategoryManagement" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column6" type="TableColumn">
+              <element at="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column6" depth="5" feature="CategoryManagement" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column6.Categoryitem" type="FreeText"/>
+            </element>
+          </element>
+        </element>
+      </element>
+      <element at="Catalog.Default.CatalogForm" depth="1" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item2" type="FormItem">
+        <element at="Catalog.Default.CatalogForm.Item2" depth="2" feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit" type="SubmitButton">
+          <transition feature="BasicFrontEndDefinitions" name="onClick[verifyCatalogForm]" source="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit" target="Checkout.Default"/>
+        </element>
+      </element>
+      <element at="Catalog.Default.CatalogForm" depth="1" feature="DisplayWhatIsNew" name="Catalog.Default.CatalogForm.ShowProductsByNearestDate" type="TextualLink">
+        <transition feature="DisplayWhatIsNew" name="onClick[goToCatalogShowingProductsByNearestDate]" source="Catalog.Default.CatalogForm.ShowProductsByNearestDate" target="Catalog.Default"/>
+      </element>
+    </element>
+    <element at="section3" depth="0" feature="DisplayByCategory" name="Catalog.Default.CategoriesTable" type="Table">
+      <element at="Catalog.Default.CategoriesTable" depth="1" feature="DisplayByCategory" name="Catalog.Default.CategoriesTable.Row3" type="TableRow">
+        <element at="Catalog.Default.CategoriesTable.Row3" depth="2" feature="DisplayByCategory" name="Catalog.Default.CategoriesTable.Row3.CategoryRowName" type="TableHeader"/>
+      </element>
+      <element at="Catalog.Default.CategoriesTable" depth="1" feature="DisplayByCategory" name="Catalog.Default.CategoriesTable.Row4" type="DynamicRowSet">
+        <element at="Catalog.Default.CategoriesTable.Row4" depth="2" feature="DisplayByCategory" name="Catalog.Default.CategoriesTable.Row4.CategoryColumn" type="TableColumn">
+          <element at="Catalog.Default.CategoriesTable.Row4.CategoryColumn" depth="3" feature="DisplayByCategory" name="Catalog.Default.CategoriesTable.Row4.CategoryColumn.ShowProductsByCategory" type="TextualLink"/>
+        </element>
+      </element>
+    </element>
+  </screen>
+  <screen feature="" layout="1ColumnB" name="Home">
+    <element at="header1" depth="0" feature="StaticContent" name="Home.Default.HeaderLink" type="ImageLink">
+      <transition feature="StaticContent" name="" source="Home.Default.HeaderLink" target="Home.Default"/>
+    </element>
+    <element at="section2" depth="0" feature="StaticContent" name="Home.Default.WelcomeMessage" type="FreeText"/>
+    <element at="header2" depth="0" feature="StaticContent" name="Home.Default.HeaderTitle" type="FreeText"/>
+    <element at="bottom" depth="0" feature="StaticContent" name="Home.Default.Footer" type="FreeText"/>
+    <element at="section1" depth="0" feature="StaticContent" name="Home.Default.WelcomeTitle" type="FreeText"/>
+    <element at="header3" depth="0" feature="StaticContent" name="Home.Default.MainMenu" type="HorizontalList">
+      <element at="Home.Default.MainMenu" depth="1" feature="StaticContent" name="Home.Default.MainMenu.Item1" type="ListItem">
+        <element at="Home.Default.MainMenu.Item1" depth="2" feature="StaticContent" name="Home.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Home.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+        </element>
+      </element>
+      <element at="Home.Default.MainMenu" depth="1" feature="StaticContent" name="Home.Default.MainMenu.Item2" type="ListItem">
+        <element at="Home.Default.MainMenu.Item2" depth="2" feature="StaticContent" name="Home.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Home.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+        </element>
+      </element>
+      <element at="Home.Default.MainMenu" depth="1" feature="StaticContent" name="Home.Default.MainMenu.Item3" type="ListItem">
+        <element at="Home.Default.MainMenu.Item3" depth="2" feature="StaticContent" name="Home.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Home.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+        </element>
+      </element>
+    </element>
+  </screen>
+  <screen feature="BasicBackEndDefinitions" layout="1ColumnA" name="Seller">
+    <element at="header1" depth="0" feature="StaticContent" name="Seller.Default.HeaderLink" type="ImageLink"/>
+    <element at="header2" depth="0" feature="StaticContent" name="Seller.Default.HeaderTitle" type="FreeText"/>
+    <element at="bottom" depth="0" feature="StaticContent" name="Seller.Default.Footer" type="FreeText"/>
+    <element at="header3" depth="0" feature="StaticContent" name="Seller.Default.MainMenu" type="HorizontalList">
+      <element at="Seller.Default.MainMenu" depth="1" feature="StaticContent" name="Seller.Default.MainMenu.Item1" type="ListItem">
+        <element at="Seller.Default.MainMenu.Item1" depth="2" feature="StaticContent" name="Seller.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Seller.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+        </element>
+      </element>
+      <element at="Seller.Default.MainMenu" depth="1" feature="StaticContent" name="Seller.Default.MainMenu.Item2" type="ListItem">
+        <element at="Seller.Default.MainMenu.Item2" depth="2" feature="StaticContent" name="Seller.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Seller.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+        </element>
+      </element>
+      <element at="Seller.Default.MainMenu" depth="1" feature="StaticContent" name="Seller.Default.MainMenu.Item3" type="ListItem">
+        <element at="Seller.Default.MainMenu.Item3" depth="2" feature="StaticContent" name="Seller.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Seller.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+        </element>
+      </element>
+    </element>
+    <element at="section1" depth="0" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm" type="Form">
+      <element at="Seller.Default.SellerForm" depth="1" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item1" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item1" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item1.SellerInfo" type="FreeText"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item10" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item10" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item10.SellerFormSubmit" type="SubmitButton">
+          <transition feature="BasicBackEndDefinitions" name="onClick[verifySellerForm]/processSellerForm" source="Seller.Default.SellerForm.Item10.SellerFormSubmit" target="Response.Default"/>
+        </element>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item2" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item2" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item2.SellerName" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item2" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item2.SellerNameField" type="TextField"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item3" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item3" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item3.SellerAddress" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item3" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item3.SellerAddressField" type="TextField"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item4" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item4" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item4.SellerMail" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item4" depth="2" feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item4.SellerMailField" type="TextField"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="ProductManagement" name="Seller.Default.SellerForm.Item5" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item5" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item5.ProductInfo" type="FreeText"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="ProductManagement" name="Seller.Default.SellerForm.Item6" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item6" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item6.ProductName" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item6" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item6.ProductNameField" type="TextField"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="ProductManagement" name="Seller.Default.SellerForm.Item7" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item7" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item7.ProductDescription" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item7" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item7.ProductDescriptionField" type="TextArea"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="ProductManagement" name="Seller.Default.SellerForm.Item8" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item8" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item8.ProductPrice" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item8" depth="2" feature="ProductManagement" name="Seller.Default.SellerForm.Item8.ProductPriceField" type="TextField"/>
+      </element>
+      <element at="Seller.Default.SellerForm" depth="1" feature="CategoryManagement" name="Seller.Default.SellerForm.Item9" type="FormItem">
+        <element at="Seller.Default.SellerForm.Item9" depth="2" feature="CategoryManagement" name="Seller.Default.SellerForm.Item9.ProductCategory" type="Label"/>
+        <element at="Seller.Default.SellerForm.Item9" depth="2" feature="CategoryManagement" name="Seller.Default.SellerForm.Item9.ProductCategoryField" type="TextField"/>
+      </element>
+    </element>
+  </screen>
+  <screen feature="Checkout" layout="1ColumnC" name="Checkout">
+    <element at="header1" depth="0" feature="StaticContent" name="Checkout.Default.HeaderLink" type="ImageLink"/>
+    <element at="header2" depth="0" feature="StaticContent" name="Checkout.Default.HeaderTitle" type="FreeText"/>
+    <element at="bottom" depth="0" feature="StaticContent" name="Checkout.Default.Footer" type="FreeText"/>
+    <element at="header3" depth="0" feature="StaticContent" name="Checkout.Default.MainMenu" type="HorizontalList">
+      <element at="Checkout.Default.MainMenu" depth="1" feature="StaticContent" name="Checkout.Default.MainMenu.Item1" type="ListItem">
+        <element at="Checkout.Default.MainMenu.Item1" depth="2" feature="StaticContent" name="Checkout.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+        </element>
+      </element>
+      <element at="Checkout.Default.MainMenu" depth="1" feature="StaticContent" name="Checkout.Default.MainMenu.Item2" type="ListItem">
+        <element at="Checkout.Default.MainMenu.Item2" depth="2" feature="StaticContent" name="Checkout.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+        </element>
+      </element>
+      <element at="Checkout.Default.MainMenu" depth="1" feature="StaticContent" name="Checkout.Default.MainMenu.Item3" type="ListItem">
+        <element at="Checkout.Default.MainMenu.Item3" depth="2" feature="StaticContent" name="Checkout.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+        </element>
+      </element>
+    </element>
+    <element at="section3" depth="0" feature="Checkout" name="Checkout.Default.CheckoutForm" type="Form">
+      <element at="Checkout.Default.CheckoutForm" depth="1" feature="Checkout" name="Checkout.Default.CheckoutForm.Item1" type="FormItem">
+        <element at="Checkout.Default.CheckoutForm.Item1" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item1.CustomerInfo" type="FreeText"/>
+      </element>
+      <element at="Checkout.Default.CheckoutForm" depth="1" feature="Checkout" name="Checkout.Default.CheckoutForm.Item2" type="FormItem">
+        <element at="Checkout.Default.CheckoutForm.Item2" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item2.CustomerName" type="Label"/>
+        <element at="Checkout.Default.CheckoutForm.Item2" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item2.CustomerNameField" type="TextField"/>
+      </element>
+      <element at="Checkout.Default.CheckoutForm" depth="1" feature="Checkout" name="Checkout.Default.CheckoutForm.Item3" type="FormItem">
+        <element at="Checkout.Default.CheckoutForm.Item3" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item3.CustomerAddress" type="Label"/>
+        <element at="Checkout.Default.CheckoutForm.Item3" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item3.CustomerAddressField" type="TextField"/>
+      </element>
+      <element at="Checkout.Default.CheckoutForm" depth="1" feature="Checkout" name="Checkout.Default.CheckoutForm.Item4" type="FormItem">
+        <element at="Checkout.Default.CheckoutForm.Item4" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item4.CustomerMail" type="Label"/>
+        <element at="Checkout.Default.CheckoutForm.Item4" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item4.CustomerMailField" type="TextField"/>
+      </element>
+      <element at="Checkout.Default.CheckoutForm" depth="1" feature="Checkout" name="Checkout.Default.CheckoutForm.Item5" type="FormItem">
+        <element at="Checkout.Default.CheckoutForm.Item5" depth="2" feature="BasicPaymentDefinitions" name="Checkout.Default.CheckoutForm.Item5.PaymentType" type="RadioGroup">
+          <element at="Checkout.Default.CheckoutForm.Item5.PaymentType" depth="3" feature="PayPal" name="Checkout.Default.CheckoutForm.Item5.PaymentType.PayPal" type="RadioButton"/>
+          <element at="Checkout.Default.CheckoutForm.Item5.PaymentType" depth="3" feature="BankSlip" name="Checkout.Default.CheckoutForm.Item5.PaymentType.BankSlip" type="RadioButton"/>
+        </element>
+        <element at="Checkout.Default.CheckoutForm.Item5" depth="2" feature="BasicPaymentDefinitions" name="Checkout.Default.CheckoutForm.Item5.PaymentLabel" type="Label"/>
+      </element>
+      <element at="Checkout.Default.CheckoutForm" depth="1" feature="Checkout" name="Checkout.Default.CheckoutForm.Item6" type="FormItem">
+        <element at="Checkout.Default.CheckoutForm.Item6" depth="2" feature="Checkout" name="Checkout.Default.CheckoutForm.Item6.CheckoutFormSubmit" type="SubmitButton">
+          <transition feature="Checkout" name="onClick[verifyCheckoutForm]/processCheckoutForm" source="Checkout.Default.CheckoutForm.Item6.CheckoutFormSubmit" target="Response.Default"/>
+        </element>
+      </element>
+    </element>
+    <element at="section2" depth="0" feature="Checkout" name="Checkout.Default.CheckoutTable" type="Table">
+      <element at="Checkout.Default.CheckoutTable" depth="1" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1" type="TableRow">
+        <element at="Checkout.Default.CheckoutTable.Row1" depth="2" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header1" type="TableHeader">
+          <element at="Checkout.Default.CheckoutTable.Row1.Header1" depth="3" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header1.ImageHeader" type="FreeText"/>
+        </element>
+        <element at="Checkout.Default.CheckoutTable.Row1" depth="2" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header2" type="TableHeader">
+          <element at="Checkout.Default.CheckoutTable.Row1.Header2" depth="3" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header2.NameHeader" type="FreeText"/>
+        </element>
+        <element at="Checkout.Default.CheckoutTable.Row1" depth="2" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header3" type="TableHeader">
+          <element at="Checkout.Default.CheckoutTable.Row1.Header3" depth="3" feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header3.PriceHeader" type="FreeText"/>
+        </element>
+      </element>
+      <element at="Checkout.Default.CheckoutTable" depth="1" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2" type="DynamicRowSet">
+        <element at="Checkout.Default.CheckoutTable.Row2" depth="2" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column1" type="TableColumn">
+          <element at="Checkout.Default.CheckoutTable.Row2.Column1" depth="3" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column1.ImageItem" type="SimpleImage"/>
+        </element>
+        <element at="Checkout.Default.CheckoutTable.Row2" depth="2" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column2" type="TableColumn">
+          <element at="Checkout.Default.CheckoutTable.Row2.Column2" depth="3" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column2.NameItem" type="FreeText"/>
+        </element>
+        <element at="Checkout.Default.CheckoutTable.Row2" depth="2" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column3" type="TableColumn">
+          <element at="Checkout.Default.CheckoutTable.Row2.Column3" depth="3" feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column3.PriceItem" type="FreeText"/>
+        </element>
+      </element>
+    </element>
+    <element at="section1" depth="0" feature="StaticContent" name="Checkout.Default.DetailsMsg" type="FreeText"/>
+  </screen>
+  <screen feature="BasicBackEndDefinitions" layout="1ColumnB" name="Response">
+    <element at="header1" depth="0" feature="StaticContent" name="Response.Default.HeaderLink" type="ImageLink">
+      <transition feature="StaticContent" name="" source="Response.Default.HeaderLink" target="Home.Default"/>
+    </element>
+    <element at="section2" depth="0" feature="StaticContent" name="Response.Default.Message" type="FreeText"/>
+    <element at="header2" depth="0" feature="StaticContent" name="Response.Default.HeaderTitle" type="FreeText"/>
+    <element at="bottom" depth="0" feature="StaticContent" name="Response.Default.Footer" type="FreeText"/>
+    <element at="section1" depth="0" feature="StaticContent" name="Response.Default.MessageTitle" type="FreeText"/>
+    <element at="header3" depth="0" feature="StaticContent" name="Response.Default.MainMenu" type="HorizontalList">
+      <element at="Response.Default.MainMenu" depth="1" feature="StaticContent" name="Response.Default.MainMenu.Item1" type="ListItem">
+        <element at="Response.Default.MainMenu.Item1" depth="2" feature="StaticContent" name="Response.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Response.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+        </element>
+      </element>
+      <element at="Response.Default.MainMenu" depth="1" feature="StaticContent" name="Response.Default.MainMenu.Item2" type="ListItem">
+        <element at="Response.Default.MainMenu.Item2" depth="2" feature="StaticContent" name="Response.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Response.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+        </element>
+      </element>
+      <element at="Response.Default.MainMenu" depth="1" feature="StaticContent" name="Response.Default.MainMenu.Item3" type="ListItem">
+        <element at="Response.Default.MainMenu.Item3" depth="2" feature="StaticContent" name="Response.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+          <transition feature="StaticContent" name="" source="Response.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+        </element>
+      </element>
+    </element>
+  </screen>
+</views>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_QsodMK0EEd6mis3eHak5Vg" name="DataModeling" metaclassReference="_UAgBsK0EEd6mis3eHak5Vg">
+  <eAnnotations xmi:id="_lEDCQK0EEd6mis3eHak5Vg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_lEDpUK0EEd6mis3eHak5Vg" name="DataModeling" nsURI="http:///schemas/DataModeling/_lEBNEK0EEd6mis3eHak5Vg/0" nsPrefix="DataModeling">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_lEDpUa0EEd6mis3eHak5Vg" name="Table">
+        <eAnnotations xmi:id="_lEDpUq0EEd6mis3eHak5Vg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_VZGzYK0EEd6mis3eHak5Vg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_lEDpU60EEd6mis3eHak5Vg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_lEDpVa0EEd6mis3eHak5Vg" name="View">
+        <eAnnotations xmi:id="_lEDpVq0EEd6mis3eHak5Vg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_WGNxAK0EEd6mis3eHak5Vg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_lEDpV60EEd6mis3eHak5Vg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:id="_QtRWYK0EEd6mis3eHak5Vg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_QtUZsK0EEd6mis3eHak5Vg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_QtVAwK0EEd6mis3eHak5Vg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_QtVAwa0EEd6mis3eHak5Vg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_UAgBsK0EEd6mis3eHak5Vg">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_VZGzYK0EEd6mis3eHak5Vg" name="Table">
+    <ownedAttribute xmi:id="_apg9Ea0EEd6mis3eHak5Vg" name="base_Class" association="_apfu8K0EEd6mis3eHak5Vg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_WGNxAK0EEd6mis3eHak5Vg" name="View">
+    <ownedAttribute xmi:id="_a-1FwK0EEd6mis3eHak5Vg" name="base_Class" association="_a-0esK0EEd6mis3eHak5Vg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_apfu8K0EEd6mis3eHak5Vg" name="Class_Table" memberEnd="_apg9EK0EEd6mis3eHak5Vg _apg9Ea0EEd6mis3eHak5Vg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_apg9EK0EEd6mis3eHak5Vg" name="extension_Table" type="_VZGzYK0EEd6mis3eHak5Vg" aggregation="composite" association="_apfu8K0EEd6mis3eHak5Vg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_a-0esK0EEd6mis3eHak5Vg" name="Class_View" memberEnd="_a-0esa0EEd6mis3eHak5Vg _a-1FwK0EEd6mis3eHak5Vg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_a-0esa0EEd6mis3eHak5Vg" name="extension_View" type="_WGNxAK0EEd6mis3eHak5Vg" aggregation="composite" association="_a-0esK0EEd6mis3eHak5Vg"/>
+  </packagedElement>
+</uml:Profile>

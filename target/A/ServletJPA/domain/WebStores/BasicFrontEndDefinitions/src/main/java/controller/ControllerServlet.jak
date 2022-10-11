@@ -1,0 +1,12 @@
+
+layer controllerBasicFrontEndDefinitions;
+
+refines class ControllerServlet {
+
+	public void init() {
+		Super().init();
+		actions.put("goToCatalog", new GoToCatalogAction());
+		actions.put("verifyCatalogForm", new VerifyCatalogFormAction());
+		 	 	  
+	}
+}

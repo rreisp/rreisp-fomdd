@@ -1,0 +1,18 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="ModelRepositoryRefinement" imports="java.util.Vector core.mvc.model.*" %>
+<%
+	Model m = (Model) ((Object[])argument)[0];
+	Vector<Attribute> atts = (Vector<Attribute>)((Object[])argument)[1];
+	String feature = (String)((Object[])argument)[2];
+%>
+
+layer model<%=feature%>;
+
+
+refines class <%=m.getName()%>Repository {
+
+   public <%=m.getName()%> new<%=m.getName()%>(<% for(Attribute a : atts) { if (a.getFeature().compareTo("") != 0) { if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) { %>List <%=a.getName()%><% } else { %><%=a.getType()%> <%=a.getName()%><%	} if (a.getName() != ((Attribute) atts.lastElement()).getName()) { %>, <% } } } %>) {
+		<%=m.getName()%> object = new <%=m.getName()%>(<% for(Attribute a : atts) { if (a.getFeature().compareTo("") != 0) { %><%=a.getName()%><% if (a.getName() != ((Attribute) atts.lastElement()).getName()) { %>, <% } } } %>);
+		persistOrMerge(object, object.getId());
+		return object;
+	}	
+}

@@ -1,0 +1,175 @@
+<mapping>
+  <transition feature="StaticContent" name="" source="Catalog.Default.HeaderLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+  <transition feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+  <transition feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Home.Default.HeaderLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Home.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+  <transition feature="StaticContent" name="" source="Home.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+  <transition feature="StaticContent" name="" source="Home.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Seller.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+  <transition feature="StaticContent" name="" source="Seller.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+  <transition feature="StaticContent" name="" source="Seller.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+  <transition feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+  <transition feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Response.Default.HeaderLink" target="Home.Default"/>
+  <transition feature="StaticContent" name="" source="Response.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+  <transition feature="StaticContent" name="" source="Response.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+  <transition feature="StaticContent" name="" source="Response.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  <screen feature="BasicFrontEndDefinitions" name="Catalog"/>
+  <state feature="BasicFrontEndDefinitions" name="Catalog.Default"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1.ImageHeader"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2.NameHeader"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3.DescriptionHeader"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4.PriceHeader"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5.BuyHeader"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1.ImageItem"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2.NameItem"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3.DescriptionItem"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4.PriceItem"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5.BuyItem"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item2"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit"/>
+  <element feature="BasicFrontEndDefinitions" name="Catalog.Default.CatalogTitle"/>
+  <element feature="StaticContent" name="Catalog.Default.Footer"/>
+  <element feature="StaticContent" name="Catalog.Default.HeaderLink"/>
+  <element feature="StaticContent" name="Catalog.Default.HeaderTitle"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu.Item1"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu.Item1.SellerLink"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu.Item2"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu.Item2.CatalogLink"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu.Item3"/>
+  <element feature="StaticContent" name="Catalog.Default.MainMenu.Item3.HomeLink"/>
+  <screen feature="Checkout" name="Checkout"/>
+  <state feature="Checkout" name="Checkout.Default"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item1"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item1.CustomerInfo"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item2"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item2.CustomerName"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item2.CustomerNameField"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item3"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item3.CustomerAddress"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item3.CustomerAddressField"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item4"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item4.CustomerMail"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item4.CustomerMailField"/>
+  <element feature="BasicPaymentDefinitions" name="Checkout.Default.CheckoutForm.Item5"/>
+  <element feature="BasicPaymentDefinitions" name="Checkout.Default.CheckoutForm.Item5.PaymentLabel"/>
+  <element feature="BasicPaymentDefinitions" name="Checkout.Default.CheckoutForm.Item5.PaymentType"/>
+  <element feature="BankSlip" name="Checkout.Default.CheckoutForm.Item5.PaymentType.BankSlip"/>
+  <element feature="Paypal" name="Checkout.Default.CheckoutForm.Item5.PaymentType.PayPal"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item6"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutForm.Item6.CheckoutFormSubmit"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header1"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header1.ImageHeader"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header2"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header2.NameHeader"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header3"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row1.Header3.PriceHeader"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column1"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column1.ImageItem"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column2"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column2.NameItem"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column3"/>
+  <element feature="Checkout" name="Checkout.Default.CheckoutTable.Row2.Column3.PriceItem"/>
+  <element feature="StaticContent" name="Checkout.Default.DetailsMsg"/>
+  <element feature="StaticContent" name="Checkout.Default.Footer"/>
+  <element feature="StaticContent" name="Checkout.Default.HeaderLink"/>
+  <element feature="StaticContent" name="Checkout.Default.HeaderTitle"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu.Item1"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu.Item1.SellerLink"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu.Item2"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu.Item2.CatalogLink"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu.Item3"/>
+  <element feature="StaticContent" name="Checkout.Default.MainMenu.Item3.HomeLink"/>
+  <screen feature="" name="Home"/>
+  <state feature="" name="Home.Default"/>
+  <element feature="StaticContent" name="Home.Default.Footer"/>
+  <element feature="StaticContent" name="Home.Default.HeaderLink"/>
+  <element feature="StaticContent" name="Home.Default.HeaderTitle"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu.Item1"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu.Item1.SellerLink"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu.Item2"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu.Item2.CatalogLink"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu.Item3"/>
+  <element feature="StaticContent" name="Home.Default.MainMenu.Item3.HomeLink"/>
+  <element feature="StaticContent" name="Home.Default.WelcomeMessage"/>
+  <element feature="StaticContent" name="Home.Default.WelcomeTitle"/>
+  <screen feature="BasicBackEndDefinitions" name="Response"/>
+  <state feature="BasicBackEndDefinitions" name="Response.Default"/>
+  <element feature="StaticContent" name="Response.Default.Footer"/>
+  <element feature="StaticContent" name="Response.Default.HeaderLink"/>
+  <element feature="StaticContent" name="Response.Default.HeaderTitle"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu.Item1"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu.Item1.SellerLink"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu.Item2"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu.Item2.CatalogLink"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu.Item3"/>
+  <element feature="StaticContent" name="Response.Default.MainMenu.Item3.HomeLink"/>
+  <element feature="StaticContent" name="Response.Default.Message"/>
+  <element feature="StaticContent" name="Response.Default.MessageTitle"/>
+  <screen feature="BasicBackEndDefinitions" name="Seller"/>
+  <state feature="BasicBackEndDefinitions" name="Seller.Default"/>
+  <element feature="StaticContent" name="Seller.Default.Footer"/>
+  <element feature="StaticContent" name="Seller.Default.HeaderLink"/>
+  <element feature="StaticContent" name="Seller.Default.HeaderTitle"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu.Item1"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu.Item1.SellerLink"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu.Item2"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu.Item2.CatalogLink"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu.Item3"/>
+  <element feature="StaticContent" name="Seller.Default.MainMenu.Item3.HomeLink"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item1"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item1.SellerInfo"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item2"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item2.SellerName"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item2.SellerNameField"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item3"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item3.SellerAddress"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item3.SellerAddressField"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item4"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item4.SellerMail"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item4.SellerMailField"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item5"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item5.ProductInfo"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item6"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item6.ProductName"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item6.ProductNameField"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item7"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item7.ProductDescription"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item7.ProductDescriptionField"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item8"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item8.ProductPrice"/>
+  <element feature="ProductManagement" name="Seller.Default.SellerForm.Item8.ProductPriceField"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item9"/>
+  <element feature="BasicBackEndDefinitions" name="Seller.Default.SellerForm.Item9.SellerFormSubmit"/>
+  <transition feature="BasicFrontEndDefinitions" name="onClick[verifyCatalogForm]" source="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit" target="Checkout.Default"/>
+  <transition feature="Checkout" name="onClick[verifyCheckoutForm]/processCheckoutForm" source="Checkout.Default.CheckoutForm.Item5.CheckoutFormSubmit" target="Response.Default"/>
+  <transition feature="BasicBackEndDefinitions" name="onClick[verifySellerForm]/processSellerForm" source="Seller.Default.SellerForm.Item9.SellerFormSubmit" target="Response.Default"/>
+</mapping>

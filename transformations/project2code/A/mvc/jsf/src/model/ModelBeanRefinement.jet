@@ -1,0 +1,104 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="ModelBeanRefinement" imports="java.util.Vector core.mvc.model.*"%>
+<%
+	Model m = (Model)((Object[])argument)[0];
+	Vector<Attribute> atts = (Vector<Attribute>)((Object[])argument)[1];
+	Vector<Operation> ops = (Vector<Operation>)((Object[])argument)[2];
+	Vector<Attribute> parameterStack = (Vector<Attribute>)((Object[]) argument)[3];
+	String feature = (String) ((Object[])argument)[4];
+	
+	String upperName = m.getName();
+	upperName = upperName.toUpperCase();
+	
+
+%>
+
+layer model<%=feature%>;
+
+refines class <%=m.getName() %> {
+
+<%
+	for (Attribute a : atts) {
+		if (a.getMetaType() != null) {
+	   	if (a.getFeature() != null && a.getFeature().compareTo("") != 0) {
+	   		if (a.getMetaType().compareTo("OneToOne") == 0) {
+	   			if (a.getDirection().equals("src")) {
+	%>
+	@OneToOne(mappedBy=<%= a.getType() %>.Attribute.<%= upperName %>)
+	private <%=a.getType() %> <%=a.getName() %>;
+	<%
+					}
+					else if (a.getDirection().compareTo("dst") == 0) {
+	%>
+	@OneToOne
+	private <%=a.getType() %> <%=a.getName() %>;
+	<%
+					}
+				}
+				else if (a.getMetaType().compareTo("OneToMany")  == 0) {
+	%>
+	@OneToMany(targetEntity = <%= a.getType() %>.class, mappedBy = <%= a.getType() %>.Attribute.<%= upperName %>, fetch = FetchType.LAZY)
+	private List <%=a.getName() %>;
+	<%
+				}
+				else if (a.getMetaType().compareTo("ManyToOne")  == 0) {
+	%>
+	@ManyToOne(targetEntity = <%= a.getType() %>.class, fetch = FetchType.LAZY)
+	private <%=a.getType() %> <%=a.getName() %>;
+	<%
+				}
+			}
+		}
+		else {
+	%>
+	private <%=a.getType()%> <%=a.getName()%>;
+	<%
+		}
+	}
+%>
+<%
+	for (Attribute a : atts){
+		String attrName = (""+ a.getName().charAt(0)).toUpperCase() + a.getName().substring(1,a.getName().length());
+		if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) {
+%>	
+	public List get<%=attrName %>() { 
+<%
+	}
+	else {
+%>	
+	public <%=a.getType() %> get<%=attrName %>() { 
+<%
+	}
+%>	
+		return this.<%=a.getName() %>;
+	}
+	
+<%
+		if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) {
+%>
+	public void set<%=attrName %>(List <%=a.getName() %>) {
+<%
+	}
+	else {
+%>
+	public void set<%=attrName %>(<%=a.getType() %> <%=a.getName() %>) {
+<%
+	}
+%>	
+		this.<%=a.getName() %> = <%=a.getName() %>;
+	}
+	
+<%
+	}
+	
+	for(Operation o: ops){
+		Vector<Parameter> parameters = o.getParameters();
+%>	
+	public <%=o.getType() %> <%=o.getName() %>(<% for(Parameter p: parameters){ %><%=p.getType() +" "+ p.getName()%>
+<% 
+	if (p.getName() != ((Parameter) parameters.lastElement()).getName()){ %>, <%} }%>)	{
+
+	}
+<%
+	}
+%>
+}

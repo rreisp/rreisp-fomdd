@@ -1,0 +1,36 @@
+<datamodel>
+  <table feature="BasicFrontEndDefinitions" name="Customer">
+    <attribute feature="BasicFrontEndDefinitions" name="customerName" type="String"/>
+    <attribute feature="BasicFrontEndDefinitions" name="customerAddress" type="String"/>
+    <attribute feature="BasicFrontEndDefinitions" name="customerMail" type="String"/>
+    <association dst="Order" feature="BasicFrontEndDefinitions" src="Customer" type="1..*"/>
+  </table>
+  <table feature="ProductManagement" name="Product">
+    <attribute feature="ProductManagement" name="productName" type="String"/>
+    <attribute feature="ProductManagement" name="productDescription" type="String"/>
+    <attribute feature="ProductManagement" name="productPrice" type="Double"/>
+    <association dst="Category" feature="CategoryManagement" src="Product" type="1..1"/>
+    <association dst="Product" feature="ProductManagement" src="Order" type="1..*"/>
+    <association dst="Product" feature="ProductManagement" src="Seller" type="1..1"/>
+  </table>
+  <table feature="BasicFrontEndDefinitions" name="Order">
+    <association dst="Product" feature="ProductManagement" src="Order" type="1..*"/>
+    <association dst="Payment" feature="BasicPaymentDefinitions" src="Order" type="1..1"/>
+    <association dst="Order" feature="BasicFrontEndDefinitions" src="Customer" type="1..*"/>
+  </table>
+  <table feature="BasicBackEndDefinitions" name="Seller">
+    <attribute feature="BasicBackEndDefinitions" name="sellerName" type="String"/>
+    <attribute feature="BasicBackEndDefinitions" name="sellerAddress" type="String"/>
+    <attribute feature="BasicBackEndDefinitions" name="sellerMail" type="String"/>
+    <association dst="Product" feature="ProductManagement" src="Seller" type="1..1"/>
+  </table>
+  <table feature="BasicPaymentDefinitions" name="Payment">
+    <attribute feature="BasicPaymentDefinitions" name="paymentType" type="String"/>
+    <attribute feature="BasicPaymentDefinitions" name="paymentStatus" type="String"/>
+    <association dst="Payment" feature="BasicPaymentDefinitions" src="Order" type="1..1"/>
+  </table>
+  <table feature="CategoryManagement" name="Category">
+    <attribute feature="CategoryManagement" name="categoryName" type="String"/>
+    <association dst="Category" feature="CategoryManagement" src="Product" type="1..1"/>
+  </table>
+</datamodel>

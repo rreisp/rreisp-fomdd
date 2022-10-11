@@ -1,0 +1,13 @@
+
+layer controllerBasicBackEndDefinitions;
+
+refines class ControllerServlet {
+
+	public void init() {
+		Super().init();
+		actions.put("goToResponse", new GoToResponseAction());
+		actions.put("verifySellerForm", new VerifySellerFormAction());
+		actions.put("processSellerForm", new ProcessSellerFormAction());
+		 	 	  
+	}
+}

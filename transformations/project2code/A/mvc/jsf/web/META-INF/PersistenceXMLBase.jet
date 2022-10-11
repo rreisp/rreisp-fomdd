@@ -1,0 +1,22 @@
+<%@ jet package="cartridge.A.jee.jsf.src.conf" class="PersistenceXML" imports="java.util.Vector core.mvc.model.*" %>
+<%
+	String productName = (String) ((Object[])argument)[0];
+	Vector<Model> models = (Vector<Model>) ((Object[])argument)[1];
+%>
+<persistence xmlns:p="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+	<persistence-unit name="store-pu" transaction-type="RESOURCE_LOCAL">
+		<non-jta-data-source>java:DefaultDS</non-jta-data-source>
+<%
+	for (Model m : models) {
+%>
+		<class>model.<%=m.getName()%></class>
+<%
+	}
+%>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

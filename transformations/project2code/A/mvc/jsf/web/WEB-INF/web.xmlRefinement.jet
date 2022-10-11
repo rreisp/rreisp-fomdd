@@ -1,0 +1,32 @@
+<%@ jet package="cartridge.A.jee.jsf.web.webinf" class="WebXMLRefinement" imports="core.mvc.model.* java.util.Vector" %>
+<?xml version="1.0" encoding="utf-8"?>
+<%
+	Vector<Model> models = (Vector<Model>) ((Object[])argument)[0];
+	Vector<Facade> facades = (Vector<Facade>) ((Object[])argument)[1];
+%>
+<xr:refine xmlns:xr="http://www.atarix.org/xmlRefinement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atarix.org/xmlRefinement">
+<%
+	for (Model m : models) {
+%>
+<xr:at select="//web-app">
+<xr:prepend>
+	<listener>
+		<listener-class>model.repository.<%=m.getName()%></listener-class>
+	</listener>
+</xr:prepend>
+</xr:at>
+<%
+	}
+	for (Facade f : facades) {
+%>
+<xr:at select="//web-app">
+<xr:prepend>
+	<listener>
+		<listener-class>model.repository.<%=f.getName()%></listener-class>
+	</listener>
+</xr:prepend>
+</xr:at>
+<%
+	}
+%>
+</xr:refine>

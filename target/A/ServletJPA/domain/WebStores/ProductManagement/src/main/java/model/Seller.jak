@@ -1,0 +1,17 @@
+
+layer modelProductManagement;
+
+refines class Seller {
+
+	@OneToOne(mappedBy=Product.Attribute.SELLER)
+	private Product sellerProduct;
+		
+	public Product getSellerProduct() { 	
+		return this.sellerProduct;
+	}
+	
+	public void setSellerProduct(Product sellerProduct) {	
+		this.sellerProduct = sellerProduct;
+	}
+	
+}

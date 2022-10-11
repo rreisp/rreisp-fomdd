@@ -1,0 +1,292 @@
+<statemodel>
+  <screen name="Catalog">
+    <state name="Catalog.Default">
+      <element name="Catalog.Default.HeaderLink" type="ImageLink">
+        <transition name="" source="Catalog.Default.HeaderLink" target="Home.Default"/>
+      </element>
+      <element name="Catalog.Default.HeaderTitle" type="FreeText"></element>
+      <element name="Catalog.Default.Footer" type="FreeText"></element>
+      <element name="Catalog.Default.MainMenu" type="HorizontalList">
+        <element name="Catalog.Default.MainMenu.Item1" type="ListItem">
+          <element name="Catalog.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+            <transition name="" source="Catalog.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+          </element>
+        </element>
+        <element name="Catalog.Default.MainMenu.Item2" type="ListItem">
+          <element name="Catalog.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+            <transition name="" source="Catalog.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+          </element>
+        </element>
+        <element name="Catalog.Default.MainMenu.Item3" type="ListItem">
+          <element name="Catalog.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+            <transition name="" source="Catalog.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+          </element>
+        </element>
+      </element>
+      <element name="Catalog.Default.CatalogTitle" type="FreeText"></element>
+      <element name="Catalog.Default.CatalogForm" type="Form">
+        <element name="Catalog.Default.CatalogForm.Item1" type="FormItem">
+          <element name="Catalog.Default.CatalogForm.Item1.ProductTable" type="Table">
+            <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1" type="TableRow">
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1" type="TableHeader">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header1.ImageHeader" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2" type="TableHeader">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header2.NameHeader" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3" type="TableHeader">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header3.DescriptionHeader" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4" type="TableHeader">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header4.PriceHeader" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5" type="TableHeader">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header5.BuyHeader" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header6" type="TableHeader">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row1.Header6.CategoryHeader" type="FreeText"></element>
+              </element>
+            </element>
+            <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2" type="DynamicRowSet">
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1" type="TableColumn">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column1.ImageItem" type="SimpleImage"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2" type="TableColumn">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column2.NameItem" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3" type="TableColumn">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column3.DescriptionItem" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4" type="TableColumn">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column4.PriceItem" type="FreeText"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5" type="TableColumn">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column5.BuyItem" type="CheckBox"></element>
+              </element>
+              <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column6" type="TableColumn">
+                <element name="Catalog.Default.CatalogForm.Item1.ProductTable.Row2.Column6.Categoryitem" type="FreeText"></element>
+              </element>
+            </element>
+          </element>
+        </element>
+        <element name="Catalog.Default.CatalogForm.Item2" type="FormItem">
+          <element name="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit" type="SubmitButton">
+            <transition name="onClick[verifyCatalogForm]" source="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit" target="Checkout.Default"/>
+          </element>
+        </element>
+        <element name="Catalog.Default.CatalogForm.ShowProductsByNearestDate" type="TextualLink">
+          <transition name="onClick[goToCatalogShowingProductsByNearestDate]" source="Catalog.Default.CatalogForm.ShowProductsByNearestDate" target="Catalog.Default"/>
+        </element>
+      </element>
+      <element name="Catalog.Default.CategoriesTable" type="Table">
+        <element name="Catalog.Default.CategoriesTable.Row3" type="TableRow">
+          <element name="Catalog.Default.CategoriesTable.Row3.CategoryRowName" type="TableHeader"></element>
+        </element>
+        <element name="Catalog.Default.CategoriesTable.Row4" type="DynamicRowSet">
+          <element name="Catalog.Default.CategoriesTable.Row4.CategoryColumn" type="TableColumn">
+            <element name="Catalog.Default.CategoriesTable.Row4.CategoryColumn.ShowProductsByCategory" type="TextualLink"></element>
+          </element>
+        </element>
+      </element>
+    </state>
+  </screen>
+  <screen name="Home">
+    <state name="Home.Default">
+      <element name="Home.Default.HeaderLink" type="ImageLink">
+        <transition name="" source="Home.Default.HeaderLink" target="Home.Default"/>
+      </element>
+      <element name="Home.Default.WelcomeMessage" type="FreeText"></element>
+      <element name="Home.Default.HeaderTitle" type="FreeText"></element>
+      <element name="Home.Default.Footer" type="FreeText"></element>
+      <element name="Home.Default.WelcomeTitle" type="FreeText"></element>
+      <element name="Home.Default.MainMenu" type="HorizontalList">
+        <element name="Home.Default.MainMenu.Item1" type="ListItem">
+          <element name="Home.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+            <transition name="" source="Home.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+          </element>
+        </element>
+        <element name="Home.Default.MainMenu.Item2" type="ListItem">
+          <element name="Home.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+            <transition name="" source="Home.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+          </element>
+        </element>
+        <element name="Home.Default.MainMenu.Item3" type="ListItem">
+          <element name="Home.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+            <transition name="" source="Home.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+          </element>
+        </element>
+      </element>
+    </state>
+  </screen>
+  <screen name="Seller">
+    <state name="Seller.Default">
+      <element name="Seller.Default.HeaderLink" type="ImageLink"></element>
+      <element name="Seller.Default.HeaderTitle" type="FreeText"></element>
+      <element name="Seller.Default.Footer" type="FreeText"></element>
+      <element name="Seller.Default.MainMenu" type="HorizontalList">
+        <element name="Seller.Default.MainMenu.Item1" type="ListItem">
+          <element name="Seller.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+            <transition name="" source="Seller.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+          </element>
+        </element>
+        <element name="Seller.Default.MainMenu.Item2" type="ListItem">
+          <element name="Seller.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+            <transition name="" source="Seller.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+          </element>
+        </element>
+        <element name="Seller.Default.MainMenu.Item3" type="ListItem">
+          <element name="Seller.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+            <transition name="" source="Seller.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+          </element>
+        </element>
+      </element>
+      <element name="Seller.Default.SellerForm" type="Form">
+        <element name="Seller.Default.SellerForm.Item1" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item1.SellerInfo" type="FreeText"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item10" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item10.SellerFormSubmit" type="SubmitButton">
+            <transition name="onClick[verifySellerForm]/processSellerForm" source="Seller.Default.SellerForm.Item10.SellerFormSubmit" target="Response.Default"/>
+          </element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item2" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item2.SellerName" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item2.SellerNameField" type="TextField"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item3" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item3.SellerAddress" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item3.SellerAddressField" type="TextField"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item4" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item4.SellerMail" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item4.SellerMailField" type="TextField"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item5" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item5.ProductInfo" type="FreeText"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item6" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item6.ProductName" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item6.ProductNameField" type="TextField"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item7" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item7.ProductDescription" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item7.ProductDescriptionField" type="TextArea"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item8" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item8.ProductPrice" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item8.ProductPriceField" type="TextField"></element>
+        </element>
+        <element name="Seller.Default.SellerForm.Item9" type="FormItem">
+          <element name="Seller.Default.SellerForm.Item9.ProductCategory" type="Label"></element>
+          <element name="Seller.Default.SellerForm.Item9.ProductCategoryField" type="TextField"></element>
+        </element>
+      </element>
+    </state>
+  </screen>
+  <screen name="Checkout">
+    <state name="Checkout.Default">
+      <element name="Checkout.Default.HeaderLink" type="ImageLink"></element>
+      <element name="Checkout.Default.HeaderTitle" type="FreeText"></element>
+      <element name="Checkout.Default.Footer" type="FreeText"></element>
+      <element name="Checkout.Default.MainMenu" type="HorizontalList">
+        <element name="Checkout.Default.MainMenu.Item1" type="ListItem">
+          <element name="Checkout.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+            <transition name="" source="Checkout.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+          </element>
+        </element>
+        <element name="Checkout.Default.MainMenu.Item2" type="ListItem">
+          <element name="Checkout.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+            <transition name="" source="Checkout.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+          </element>
+        </element>
+        <element name="Checkout.Default.MainMenu.Item3" type="ListItem">
+          <element name="Checkout.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+            <transition name="" source="Checkout.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+          </element>
+        </element>
+      </element>
+      <element name="Checkout.Default.CheckoutForm" type="Form">
+        <element name="Checkout.Default.CheckoutForm.Item1" type="FormItem">
+          <element name="Checkout.Default.CheckoutForm.Item1.CustomerInfo" type="FreeText"></element>
+        </element>
+        <element name="Checkout.Default.CheckoutForm.Item2" type="FormItem">
+          <element name="Checkout.Default.CheckoutForm.Item2.CustomerName" type="Label"></element>
+          <element name="Checkout.Default.CheckoutForm.Item2.CustomerNameField" type="TextField"></element>
+        </element>
+        <element name="Checkout.Default.CheckoutForm.Item3" type="FormItem">
+          <element name="Checkout.Default.CheckoutForm.Item3.CustomerAddress" type="Label"></element>
+          <element name="Checkout.Default.CheckoutForm.Item3.CustomerAddressField" type="TextField"></element>
+        </element>
+        <element name="Checkout.Default.CheckoutForm.Item4" type="FormItem">
+          <element name="Checkout.Default.CheckoutForm.Item4.CustomerMail" type="Label"></element>
+          <element name="Checkout.Default.CheckoutForm.Item4.CustomerMailField" type="TextField"></element>
+        </element>
+        <element name="Checkout.Default.CheckoutForm.Item5" type="FormItem">
+          <element name="Checkout.Default.CheckoutForm.Item5.PaymentType" type="RadioGroup">
+            <element name="Checkout.Default.CheckoutForm.Item5.PaymentType.PayPal" type="RadioButton"></element>
+            <element name="Checkout.Default.CheckoutForm.Item5.PaymentType.BankSlip" type="RadioButton"></element>
+          </element>
+          <element name="Checkout.Default.CheckoutForm.Item5.PaymentLabel" type="Label"></element>
+        </element>
+        <element name="Checkout.Default.CheckoutForm.Item6" type="FormItem">
+          <element name="Checkout.Default.CheckoutForm.Item6.CheckoutFormSubmit" type="SubmitButton">
+            <transition name="onClick[verifyCheckoutForm]/processCheckoutForm" source="Checkout.Default.CheckoutForm.Item6.CheckoutFormSubmit" target="Response.Default"/>
+          </element>
+        </element>
+      </element>
+      <element name="Checkout.Default.CheckoutTable" type="Table">
+        <element name="Checkout.Default.CheckoutTable.Row1" type="TableRow">
+          <element name="Checkout.Default.CheckoutTable.Row1.Header1" type="TableHeader">
+            <element name="Checkout.Default.CheckoutTable.Row1.Header1.ImageHeader" type="FreeText"></element>
+          </element>
+          <element name="Checkout.Default.CheckoutTable.Row1.Header2" type="TableHeader">
+            <element name="Checkout.Default.CheckoutTable.Row1.Header2.NameHeader" type="FreeText"></element>
+          </element>
+          <element name="Checkout.Default.CheckoutTable.Row1.Header3" type="TableHeader">
+            <element name="Checkout.Default.CheckoutTable.Row1.Header3.PriceHeader" type="FreeText"></element>
+          </element>
+        </element>
+        <element name="Checkout.Default.CheckoutTable.Row2" type="DynamicRowSet">
+          <element name="Checkout.Default.CheckoutTable.Row2.Column1" type="TableColumn">
+            <element name="Checkout.Default.CheckoutTable.Row2.Column1.ImageItem" type="SimpleImage"></element>
+          </element>
+          <element name="Checkout.Default.CheckoutTable.Row2.Column2" type="TableColumn">
+            <element name="Checkout.Default.CheckoutTable.Row2.Column2.NameItem" type="FreeText"></element>
+          </element>
+          <element name="Checkout.Default.CheckoutTable.Row2.Column3" type="TableColumn">
+            <element name="Checkout.Default.CheckoutTable.Row2.Column3.PriceItem" type="FreeText"></element>
+          </element>
+        </element>
+      </element>
+      <element name="Checkout.Default.DetailsMsg" type="FreeText"></element>
+    </state>
+  </screen>
+  <screen name="Response">
+    <state name="Response.Default">
+      <element name="Response.Default.HeaderLink" type="ImageLink">
+        <transition name="" source="Response.Default.HeaderLink" target="Home.Default"/>
+      </element>
+      <element name="Response.Default.Message" type="FreeText"></element>
+      <element name="Response.Default.HeaderTitle" type="FreeText"></element>
+      <element name="Response.Default.Footer" type="FreeText"></element>
+      <element name="Response.Default.MessageTitle" type="FreeText"></element>
+      <element name="Response.Default.MainMenu" type="HorizontalList">
+        <element name="Response.Default.MainMenu.Item1" type="ListItem">
+          <element name="Response.Default.MainMenu.Item1.SellerLink" type="TextualLink">
+            <transition name="" source="Response.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+          </element>
+        </element>
+        <element name="Response.Default.MainMenu.Item2" type="ListItem">
+          <element name="Response.Default.MainMenu.Item2.CatalogLink" type="TextualLink">
+            <transition name="" source="Response.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+          </element>
+        </element>
+        <element name="Response.Default.MainMenu.Item3" type="ListItem">
+          <element name="Response.Default.MainMenu.Item3.HomeLink" type="TextualLink">
+            <transition name="" source="Response.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+          </element>
+        </element>
+      </element>
+    </state>
+  </screen>
+</statemodel>

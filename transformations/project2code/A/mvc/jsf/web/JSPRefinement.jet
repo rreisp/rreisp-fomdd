@@ -1,0 +1,18 @@
+<%@ jet package="cartridge.A.jee.jsf.web" class="JSPRefinement" imports="java.util.Vector core.mvc.view.* core.fieldtype.*"%>
+<?xml version="1.0" encoding="utf-8"?>
+<xr:refine xmlns:xr="http://www.atarix.org/xmlRefinement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atarix.org/xmlRefinement"  xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<%
+	Vector<Element> elements = (Vector<Element>)((Object[])argument)[0];
+	
+	HTMLElementTranslator translator = new HTMLElementTranslator();
+	String xmlContent;
+	
+	for (Element e : elements) {
+%>
+<xr:at select="//*[@id='<%=e.getAt().replace(".", "") %>']">
+<xr:append>
+<%= translator.translateBegin(e) + translator.translateEnd(e) %>
+</xr:append>
+</xr:at>
+<%	} %>
+</xr:refine>

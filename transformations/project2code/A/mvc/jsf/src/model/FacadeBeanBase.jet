@@ -1,0 +1,123 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="FacadeBeanBase" imports="java.util.Vector core.mvc.model.*" %>
+<%
+	Facade f = (Facade)((Object[])argument)[0];
+	Vector<Attribute> atts = (Vector<Attribute>)((Object[])argument)[1];
+	Vector<Operation> ops = (Vector<Operation>)((Object[])argument)[2];
+%>
+layer model;
+
+import java.util.List;
+import javax.servlet.*;
+import javax.persistence.*;
+
+public class <%=f.getName() %>Facade implements ServletContextListener {
+
+    @PersistenceUnit(unitName = "store-pu")
+    private EntityManagerFactory emf;
+
+    private EntityManager em;
+
+    public CustomerRepository() {
+		emf = (EntityManagerFactory) Persistence.createEntityManagerFactory("store-pu");
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent sce) {
+		if (emf.isOpen()) {
+	   		emf.close();
+		}
+    }
+
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+		ServletContext context = sce.getServletContext();
+		context.setAttribute("customerRepository", this);
+    }
+
+    public final EntityManager entityManager() {
+		if (em == null || !em.isOpen()) {
+		    em = emf.createEntityManager();
+		}
+		return em;
+    }
+
+    public void persistOrMerge(Serializable entity, Serializable id) {
+		em = entityManager();
+
+		if (entity == null) {
+		    throw new IllegalArgumentException("entity");
+		}
+		try {
+	    	em.getTransaction().begin();
+	    	if (id == null) {
+				em.persist(entity);
+	    	} else {
+				em.merge(entity);
+	   		}
+	    	em.getTransaction().commit();
+		} finally {
+	    	em.close();
+		}
+    }
+<%
+	for(Attribute a: atts){
+%>
+	private <%=a.getType() %> <%=a.getName() %>;
+<%
+	}
+%>
+	
+	public <%=f.getName() %>Facade(){ }
+
+	public <%=f.getName() %>Facade(Object[] o){
+		<%=f.getName() %>Constructor(o);
+	}
+<%
+	if(atts.size()==0){
+%>
+	
+	public <%=f.getName() %>FacadeConstructor(Object[] o){}
+<%
+	}
+	else {
+%>	
+	
+	public void <%=f.getName() %>FacadeConstructor(Object[] o){
+<%
+	int i = 0;
+	for(Attribute a: atts){
+%>
+		this.<%=a.getName() %> = (<%=a.getType() %>) o[<%=i %>];
+<%
+		
+		i++;
+	}
+%>		
+	}
+<%
+	}
+	for(Attribute a: atts){
+		String attrName = (""+ a.getName().charAt(0)).toUpperCase() + a.getName().substring(1,a.getName().length());
+%>	
+	
+	public <%=a.getType() %> get<%=attrName %>(){ return this.<%=a.getName() %>; }
+	
+	public void set<%=attrName %>(<%=a.getType() %> <%=a.getName() %>){
+		this.<%=a.getName() %> = <%=a.getName() %>;
+	}
+<%
+	}
+
+	for(Operation o: ops){
+		Vector<Parameter> parameters = o.getParameters();
+%>	
+	
+	public <%=o.getType() %> <%=o.getName() %>(<% for(Parameter p: parameters){ %><%=p.getType() +" "+ p.getName() %><%if(p.getName() != ((Parameter) parameters.lastElement()).getName()){ %>, <%} }%>)
+	{
+		// TODO
+	}
+<%
+	}
+%>
+}
+

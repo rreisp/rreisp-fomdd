@@ -1,0 +1,34 @@
+<controllers>
+  <screen feature="BasicFrontEndDefinitions" name="Catalog">
+    <handler feature="StaticContent" name="" source="Catalog.Default.HeaderLink" target="Home.Default"/>
+    <handler feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+    <handler feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+    <handler feature="StaticContent" name="" source="Catalog.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+    <handler feature="BasicFrontEndDefinitions" name="onClick[verifyCatalogForm]" source="Catalog.Default.CatalogForm.Item2.CatalogFormSubmit" target="Checkout.Default"/>
+    <handler feature="DisplayWhatIsNew" name="onClick[goToCatalogShowingProductsByNearestDate]" source="Catalog.Default.CatalogForm.ShowProductsByNearestDate" target="Catalog.Default"/>
+  </screen>
+  <screen feature="" name="Home">
+    <handler feature="StaticContent" name="" source="Home.Default.HeaderLink" target="Home.Default"/>
+    <handler feature="StaticContent" name="" source="Home.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+    <handler feature="StaticContent" name="" source="Home.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+    <handler feature="StaticContent" name="" source="Home.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  </screen>
+  <screen feature="BasicBackEndDefinitions" name="Seller">
+    <handler feature="StaticContent" name="" source="Seller.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+    <handler feature="StaticContent" name="" source="Seller.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+    <handler feature="StaticContent" name="" source="Seller.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+    <handler feature="BasicBackEndDefinitions" name="onClick[verifySellerForm]/processSellerForm" source="Seller.Default.SellerForm.Item10.SellerFormSubmit" target="Response.Default"/>
+  </screen>
+  <screen feature="Checkout" name="Checkout">
+    <handler feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+    <handler feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+    <handler feature="StaticContent" name="" source="Checkout.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+    <handler feature="Checkout" name="onClick[verifyCheckoutForm]/processCheckoutForm" source="Checkout.Default.CheckoutForm.Item6.CheckoutFormSubmit" target="Response.Default"/>
+  </screen>
+  <screen feature="BasicBackEndDefinitions" name="Response">
+    <handler feature="StaticContent" name="" source="Response.Default.HeaderLink" target="Home.Default"/>
+    <handler feature="StaticContent" name="" source="Response.Default.MainMenu.Item1.SellerLink" target="Seller.Default"/>
+    <handler feature="StaticContent" name="" source="Response.Default.MainMenu.Item2.CatalogLink" target="Catalog.Default"/>
+    <handler feature="StaticContent" name="" source="Response.Default.MainMenu.Item3.HomeLink" target="Home.Default"/>
+  </screen>
+</controllers>

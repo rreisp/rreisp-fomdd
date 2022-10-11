@@ -1,0 +1,41 @@
+
+package model.action;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
+import model.Payment;
+import model.repository.PaymentRepository;
+
+public class NewPaymentAction implements ModelAction {
+
+    Object params[];
+    private PaymentRepository paymentRepository;
+
+    public NewPaymentAction() {
+    
+    }
+
+    @Override
+    public Object execute(HttpServletRequest request, HttpServletResponse response) {
+        ServletContext context = request.getSession().getServletContext();
+        paymentRepository = (PaymentRepository) context.getAttribute("paymentRepository");
+        setParams(request);
+
+        // TODO This part you'll need to write by hand. Sorry!
+        // Create (Persist) your payment using paymentRepository
+        Payment object = paymentRepository.newPayment();
+		
+        // return your persistent Entity;
+        return object;
+    }
+
+    @Override
+    public void setParams(HttpServletRequest request) {
+        // TODO This part you'll need to write by hand. Sorry!
+        // Get the payment fields from request and put in params[] array
+		
+    }
+}

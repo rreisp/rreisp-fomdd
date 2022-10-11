@@ -1,0 +1,53 @@
+layer model;
+
+import java.io.Serializable;
+import java.util.List;
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "t_order")
+public class Order implements java.io.Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	public static class Attribute {
+		public final static String CUSTOMER = "orderCustomer";
+		// TODO: This part you'll need to write by hand. Sorry!
+		// Complete with more relation attributes that aren't listed here
+		// Composed attributes need to be added.
+	}
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	@ManyToOne(targetEntity = Customer.class, fetch = FetchType.LAZY)
+	private Customer orderCustomer;
+	
+	
+	public Order() {
+		// Used by JPA.
+	}
+
+	public Order(Customer orderCustomer) {
+		this.orderCustomer = (Customer) orderCustomer;		
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return id;
+	}
+		
+	public Customer getOrderCustomer() { 	
+		return this.orderCustomer;
+	}
+	
+	public void setOrderCustomer(Customer orderCustomer) {	
+		this.orderCustomer = orderCustomer;
+	}
+	
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataModeling="http:///schemas/DataModeling/_lEBNEK0EEd6mis3eHak5Vg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DataModeling/_lEBNEK0EEd6mis3eHak5Vg/0 ../../../../../metamodels/interactive/analysis/data/DataModeling.profile.uml#_lEDpUK0EEd6mis3eHak5Vg">
+  <uml:Package xmi:id="_-9UbcYEUEd6PWfL3cx7uVw" name="WebStoreDataModel">
+    <elementImport xmi:id="__AGCoIEUEd6PWfL3cx7uVw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </elementImport>
+    <elementImport xmi:id="__EKqUIEUEd6PWfL3cx7uVw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <elementImport xmi:id="__EKqUYEUEd6PWfL3cx7uVw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    </elementImport>
+    <elementImport xmi:id="__EKqUoEUEd6PWfL3cx7uVw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BFMG4IEVEd6PWfL3cx7uVw" name="Customer">
+      <ownedAttribute xmi:id="_Ws-M8IHsEd6nqJccNAeLfg" name="name" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZmnTkIHsEd6nqJccNAeLfg" name="address" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uUxvQIHtEd6nqJccNAeLfg" name="mail" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Hn0woIEZEd6PWfL3cx7uVw" name="Product">
+      <ownedAttribute xmi:id="_8idsEIHkEd6nqJccNAeLfg" name="name" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_BGjiUIHlEd6nqJccNAeLfg" name="description" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_CwKkcIHlEd6nqJccNAeLfg" name="price" type="_98IgkCifEd-5Z6ZrnFc_5A" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ffn40B8sEd-jyarboPCbtw" name="Order"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_98IgkCifEd-5Z6ZrnFc_5A" name="Double"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_10ShkClhEd-_9oVsonnyXQ" name="Byte"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FvMfECliEd-_9oVsonnyXQ" name="Date"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Lr_0sCliEd-_9oVsonnyXQ" name="DateTime"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_R54TQCliEd-_9oVsonnyXQ" name="Currency"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bnXBAClpEd-_9oVsonnyXQ" name="TimeStamp"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_BFTM4CmQEd-2XKWawPs9Hw" name="Memo"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_nCRBcCmSEd-2XKWawPs9Hw" name="Set"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uwSdECmSEd-2XKWawPs9Hw" name="Time"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_llnn0CmTEd-2XKWawPs9Hw" name="Object"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UffMsF-eEd-IX6qDRcNxRQ" name="1..*" memberEnd="_UfksQF-eEd-IX6qDRcNxRQ _Ufl6YF-eEd-IX6qDRcNxRQ">
+      <ownedEnd xmi:id="_UfksQF-eEd-IX6qDRcNxRQ" name="src" type="_Ffn40B8sEd-jyarboPCbtw" association="_UffMsF-eEd-IX6qDRcNxRQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UflTUV-eEd-IX6qDRcNxRQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UflTUF-eEd-IX6qDRcNxRQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_Ufl6YF-eEd-IX6qDRcNxRQ" name="dst" type="_Hn0woIEZEd6PWfL3cx7uVw" association="_UffMsF-eEd-IX6qDRcNxRQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ufl6Yl-eEd-IX6qDRcNxRQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ufl6YV-eEd-IX6qDRcNxRQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Xp5TMF-eEd-IX6qDRcNxRQ" name="Seller">
+      <ownedAttribute xmi:id="_igfpUF-eEd-IX6qDRcNxRQ" name="name" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_y7KsAF-eEd-IX6qDRcNxRQ" name="address" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_N-8bYF-fEd-IX6qDRcNxRQ" name="mail" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_azF4wF-eEd-IX6qDRcNxRQ" name="1..1" memberEnd="_azGf0F-eEd-IX6qDRcNxRQ _azHG4F-eEd-IX6qDRcNxRQ">
+      <ownedEnd xmi:id="_azGf0F-eEd-IX6qDRcNxRQ" name="src" type="_Xp5TMF-eEd-IX6qDRcNxRQ" association="_azF4wF-eEd-IX6qDRcNxRQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_azGf0l-eEd-IX6qDRcNxRQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_azGf0V-eEd-IX6qDRcNxRQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_azHG4F-eEd-IX6qDRcNxRQ" name="dst" type="_Hn0woIEZEd6PWfL3cx7uVw" association="_azF4wF-eEd-IX6qDRcNxRQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_azHG4l-eEd-IX6qDRcNxRQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_azHG4V-eEd-IX6qDRcNxRQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cgRzUF-eEd-IX6qDRcNxRQ" name="1..*" memberEnd="_cgRzUV-eEd-IX6qDRcNxRQ _cgSaYl-eEd-IX6qDRcNxRQ">
+      <ownedEnd xmi:id="_cgRzUV-eEd-IX6qDRcNxRQ" name="src" type="_BFMG4IEVEd6PWfL3cx7uVw" association="_cgRzUF-eEd-IX6qDRcNxRQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgSaYV-eEd-IX6qDRcNxRQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cgSaYF-eEd-IX6qDRcNxRQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_cgSaYl-eEd-IX6qDRcNxRQ" name="dst" type="_Ffn40B8sEd-jyarboPCbtw" association="_cgRzUF-eEd-IX6qDRcNxRQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgSaZF-eEd-IX6qDRcNxRQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cgSaY1-eEd-IX6qDRcNxRQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JAs0AHV9Ed-9SrllPSnL-w" name="Payment">
+      <ownedAttribute xmi:id="_flt5EHV9Ed-9SrllPSnL-w" name="status" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hMS1UHV9Ed-9SrllPSnL-w" name="1..1" memberEnd="_hMUDcHV9Ed-9SrllPSnL-w _hMUqgnV9Ed-9SrllPSnL-w">
+      <ownedEnd xmi:id="_hMUDcHV9Ed-9SrllPSnL-w" name="src" type="_Ffn40B8sEd-jyarboPCbtw" association="_hMS1UHV9Ed-9SrllPSnL-w">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hMUqgXV9Ed-9SrllPSnL-w" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hMUqgHV9Ed-9SrllPSnL-w" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_hMUqgnV9Ed-9SrllPSnL-w" name="dst" type="_JAs0AHV9Ed-9SrllPSnL-w" association="_hMS1UHV9Ed-9SrllPSnL-w">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hMUqhHV9Ed-9SrllPSnL-w" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hMUqg3V9Ed-9SrllPSnL-w" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_fmiiIBJZEd-l9utsBQ-7jw">
+      <eAnnotations xmi:id="_fmjJMBJZEd-l9utsBQ-7jw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../../../../metamodels/interactive/analysis/data/DataModeling.profile.uml#_lEDpUK0EEd6mis3eHak5Vg"/>
+      </eAnnotations>
+      <appliedProfile href="../../../../../metamodels/interactive/analysis/data/DataModeling.profile.uml#_QsodMK0EEd6mis3eHak5Vg"/>
+    </profileApplication>
+  </uml:Package>
+  <DataModeling:Table xmi:id="_MJByABKEEd-NGrlEIOiIiA" base_Class="_BFMG4IEVEd6PWfL3cx7uVw"/>
+  <DataModeling:Table xmi:id="_Sd_wABKEEd-NGrlEIOiIiA" base_Class="_Hn0woIEZEd6PWfL3cx7uVw"/>
+  <DataModeling:Table xmi:id="_GZVIAB8sEd-jyarboPCbtw" base_Class="_Ffn40B8sEd-jyarboPCbtw"/>
+  <DataModeling:Table xmi:id="_UoDn8F-gEd-IX6qDRcNxRQ" base_Class="_Xp5TMF-eEd-IX6qDRcNxRQ"/>
+  <DataModeling:Table xmi:id="_LB818HTAEd--kfd01mwGYw"/>
+  <DataModeling:Table xmi:id="_StqokHV9Ed-9SrllPSnL-w" base_Class="_JAs0AHV9Ed-9SrllPSnL-w"/>
+</xmi:XMI>

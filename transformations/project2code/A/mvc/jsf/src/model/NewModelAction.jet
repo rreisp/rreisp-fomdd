@@ -1,0 +1,45 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="NewModelAction" imports="core.mvc.model.*" %>
+<%
+	Model m = (Model)((Object[])argument)[0];
+%>
+
+layer model.action;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
+import model.<%=m.getName()%>;
+import model.repository.<%=m.getName()%>Repository;
+
+public class New<%=m.getName()%>Action implements ModelAction {
+
+    Object params[];
+    private <%=m.getName()%>Repository <%=m.getName().toLowerCase()%>Repository;
+
+    public New<%=m.getName()%>Action() {
+    
+    }
+
+    @Override
+    public Object execute(HttpServletRequest request, HttpServletResponse response) {
+        ServletContext context = request.getSession().getServletContext();
+        <%=m.getName().toLowerCase()%>Repository = (<%=m.getName()%>Repository) context.getAttribute("<%=m.getName().toLowerCase()%>Repository");
+        setParams(request);
+
+        // TODO This part you'll need to write by hand. Sorry!
+        // Create (Persist) your <%=m.getName().toLowerCase()%> using <%=m.getName().toLowerCase()%>Repository
+        <%=m.getName()%> object = <%=m.getName().toLowerCase()%>Repository.new<%=m.getName()%>();
+		
+        // return your persistent Entity;
+        return object;
+    }
+
+    @Override
+    public void setParams(HttpServletRequest request) {
+        // TODO This part you'll need to write by hand. Sorry!
+        // Get the <%=m.getName().toLowerCase()%> fields from request and put in params[] array
+		
+    }
+}

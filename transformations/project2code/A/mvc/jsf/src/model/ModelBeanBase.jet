@@ -1,0 +1,161 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="ModelBeanBase" imports="java.util.Vector core.mvc.model.*" %>
+<%
+	Model m = (Model)((Object[])argument)[0];
+	Vector<Attribute> atts = (Vector<Attribute>)((Object[])argument)[1];
+	Vector<Operation> ops = (Vector<Operation>)((Object[])argument)[2];
+	
+	String upperName = m.getName();
+	upperName = upperName.toUpperCase();	
+%>
+layer model;
+
+import java.io.Serializable;
+import java.util.List;
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "<%= "t_" + m.getName().toLowerCase() %>")
+public class <%=m.getName() %> implements java.io.Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	public static class Attribute {
+	<%
+	   for (Attribute a : atts) {
+	   	if (a.getMetaType() != null) {
+	   		if (a.getMetaType().compareTo("") != 0 && a.getMetaType().compareTo("Primitive") != 0) {
+	%>	public final static String <%= a.getType().toUpperCase() %> = "<%= a.getName() %>";
+	<%
+				}
+				else {
+	%>	public final static String <%= a.getName() .toUpperCase() %> = "<%= a.getName() %>";
+	<%	
+				}
+			}
+		}
+	%>	// TODO: This part you'll need to write by hand. Sorry!
+		// Complete with more relation attributes that aren't listed here
+		// Composed attributes need to be added.
+	}
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	<%
+	for (Attribute a : atts) {
+	   if (a.getMetaType() != null  && a.getDirection() != null) {
+	   	if (a.getMetaType().equals("OneToOne")) {
+	   		if (a.getDirection().compareTo("src") != 0) {
+	%>
+	@OneToOne(mappedBy=<%= a.getType() %>.Attribute.<%= upperName %>)
+	private <%=a.getType() %> <%=a.getName()%>;
+	
+	<%
+			}
+			else if (a.getDirection().compareTo("dst") != 0) {
+	%>
+	@OneToOne
+	private <%=a.getType() %> <%=a.getName()%>;
+	
+	<%
+			}
+		}
+		else if (a.getMetaType().equals("OneToMany")) {
+	%>
+	@OneToMany(targetEntity = <%= a.getType() %>.class, mappedBy = <%= a.getType() %>.Attribute.<%= upperName %>, fetch = FetchType.LAZY)
+	private List <%=a.getName()%>;
+	
+	<%
+		}
+		else if (a.getMetaType().equals("ManyToOne")) {
+	%>
+	@ManyToOne(targetEntity = <%= a.getType() %>.class, fetch = FetchType.LAZY)
+	private <%=a.getType() %> <%=a.getName()%>;
+	
+	<%	
+		}
+		}
+		else {
+	%>
+	private <%=a.getType()%> <%=a.getName()%>;
+	<%
+		}
+	}
+	%>
+	public <%=m.getName()%>() {
+		// Used by JPA.
+	}
+
+	public <%=m.getName()%>(<% for(Attribute a : atts) { if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) { %>List <%=a.getName()%><% } else { %><%=a.getType()%> <%=a.getName()%><% } if (a.getName() != ((Attribute) atts.lastElement()).getName()) { %>, <% } } %>) {
+<%
+	for (Attribute a : atts) {
+		if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) {
+%>
+		this.<%=a.getName()%> = (List) <%=a.getName()%>;	
+<%
+		}
+		else {
+%>
+		this.<%=a.getName()%> = (<%=a.getType()%>) <%=a.getName()%>;
+<%
+		}
+	}
+%>		
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return id;
+	}
+	
+<%
+	for (Attribute a : atts){
+		String attrName = (""+ a.getName().charAt(0)).toUpperCase() + a.getName().substring(1,a.getName().length());
+		if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) {
+%>	
+	public List get<%=attrName %>() { 
+<%
+	}
+	else {
+%>	
+	public <%=a.getType() %> get<%=attrName %>() { 
+<%
+	}
+%>	
+		return this.<%=a.getName() %>;
+	}
+	
+<%
+		if (a.getMetaType() != null && a.getMetaType().equals("OneToMany")) {
+%>
+	public void set<%=attrName %>(List <%=a.getName() %>) {
+<%
+	}
+	else {
+%>
+	public void set<%=attrName %>(<%=a.getType() %> <%=a.getName() %>) {
+<%
+	}
+%>	
+		this.<%=a.getName() %> = <%=a.getName() %>;
+	}
+	
+<%
+	}
+
+	for(Operation o: ops){
+		Vector<Parameter> parameters = o.getParameters();
+%>	
+	public <%=o.getType() %> <%=o.getName() %>(<% for(Parameter p: parameters){ %><%=p.getType() +" "+ p.getName()%>
+<% 
+	if (p.getName() != ((Parameter) parameters.lastElement()).getName()){ %>, <%} }%>)	{
+
+	}
+<%
+	}
+%>
+}

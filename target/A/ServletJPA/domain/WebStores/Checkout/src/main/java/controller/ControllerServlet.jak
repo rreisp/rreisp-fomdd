@@ -1,0 +1,13 @@
+
+layer controllerCheckout;
+
+refines class ControllerServlet {
+
+	public void init() {
+		Super().init();
+		actions.put("goToCheckout", new GoToCheckoutAction());
+		actions.put("verifyCheckoutForm", new VerifyCheckoutFormAction());
+		actions.put("processCheckoutForm", new ProcessCheckoutFormAction());
+		 	 	  
+	}
+}

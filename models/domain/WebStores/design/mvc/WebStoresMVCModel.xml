@@ -1,0 +1,30 @@
+<models>
+  <model feature="BasicFrontEndDefinitions" name="Customer">
+    <attribute feature="BasicFrontEndDefinitions" name="customerName" type="String"/>
+    <attribute feature="BasicFrontEndDefinitions" name="customerAddress" type="String"/>
+    <attribute feature="BasicFrontEndDefinitions" name="customerMail" type="String"/>
+    <attribute direction="src" feature="BasicFrontEndDefinitions" metaType="OneToMany" name="customerOrder" type="Order"/>
+  </model>
+  <model feature="ProductManagement" name="Product">
+    <attribute feature="ProductManagement" name="productName" type="String"/>
+    <attribute feature="ProductManagement" name="productDescription" type="String"/>
+    <attribute feature="ProductManagement" name="productPrice" type="Double"/>
+    <attribute direction="dst" feature="ProductManagement" metaType="ManyToOne" name="productOrder" type="Order"/>
+    <attribute direction="dst" feature="ProductManagement" metaType="OneToOne" name="productSeller" type="Seller"/>
+  </model>
+  <model feature="BasicFrontEndDefinitions" name="Order">
+    <attribute direction="src" feature="ProductManagement" metaType="OneToMany" name="orderProduct" type="Product"/>
+    <attribute direction="src" feature="Payment" metaType="OneToOne" name="orderPayment" type="Payment"/>
+    <attribute direction="dst" feature="BasicFrontEndDefinitions" metaType="ManyToOne" name="orderCustomer" type="Customer"/>
+  </model>
+  <model feature="BasicBackEndDefinitions" name="Seller">
+    <attribute feature="BasicBackEndDefinitions" name="sellerName" type="String"/>
+    <attribute feature="BasicBackEndDefinitions" name="sellerAddress" type="String"/>
+    <attribute feature="BasicBackEndDefinitions" name="sellerMail" type="String"/>
+    <attribute direction="src" feature="ProductManagement" metaType="OneToOne" name="sellerProduct" type="Product"/>
+  </model>
+  <model feature="Payment" name="Payment">
+    <attribute feature="Payment" name="paymentStatus" type="String"/>
+    <attribute direction="dst" feature="Payment" metaType="OneToOne" name="paymentOrder" type="Order"/>
+  </model>
+</models>

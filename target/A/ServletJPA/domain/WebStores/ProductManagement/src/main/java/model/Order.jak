@@ -1,0 +1,17 @@
+
+layer modelProductManagement;
+
+refines class Order {
+
+	@OneToMany(targetEntity = Product.class, mappedBy = Product.Attribute.ORDER, fetch = FetchType.LAZY)
+	private List orderProduct;
+		
+	public List getOrderProduct() { 	
+		return this.orderProduct;
+	}
+	
+	public void setOrderProduct(List orderProduct) {	
+		this.orderProduct = orderProduct;
+	}
+	
+}

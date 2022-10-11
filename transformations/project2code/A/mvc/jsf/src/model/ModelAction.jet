@@ -1,0 +1,13 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="ModelAction" %>
+
+layer model.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public interface ModelAction {
+
+    Object execute(HttpServletRequest request, HttpServletResponse response);
+
+    void setParams(HttpServletRequest request);
+}

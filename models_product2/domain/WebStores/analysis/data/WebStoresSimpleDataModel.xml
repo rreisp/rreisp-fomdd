@@ -1,0 +1,31 @@
+<datamodel>
+  <table name="Customer">
+    <attribute name="customerName" type="String"/>
+    <attribute name="customerAddress" type="String"/>
+    <attribute name="customerMail" type="String"/>
+    <association dst="Order" src="Customer" type="1..*"/>
+  </table>
+  <table name="Product">
+    <attribute name="productName" type="String"/>
+    <attribute name="productDescription" type="String"/>
+    <attribute name="productPrice" type="Double"/>
+    <association dst="Product" src="Order" type="1..*"/>
+    <association dst="Product" src="Seller" type="1..1"/>
+  </table>
+  <table name="Order">
+    <association dst="Product" src="Order" type="1..*"/>
+    <association dst="Payment" src="Order" type="1..1"/>
+    <association dst="Order" src="Customer" type="1..*"/>
+  </table>
+  <table name="Seller">
+    <attribute name="sellerName" type="String"/>
+    <attribute name="sellerAddress" type="String"/>
+    <attribute name="sellerMail" type="String"/>
+    <association dst="Product" src="Seller" type="1..1"/>
+  </table>
+  <table name="Payment">
+    <attribute name="paymentType" type="String"/>
+    <attribute name="paymentStatus" type="String"/>
+    <association dst="Payment" src="Order" type="1..1"/>
+  </table>
+</datamodel>

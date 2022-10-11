@@ -1,0 +1,72 @@
+<%@ jet package="cartridge.A.jee.jsf.src.model" class="FacadeBeanRefinement" imports="java.util.Vector core.mvc.model.*"%>
+<%
+	Facade f = (Facade)((Object[])argument)[0];
+	Vector<Attribute> atts = (Vector<Attribute>)((Object[])argument)[1];
+	Vector<Operation> ops = (Vector<Operation>)((Object[])argument)[2];
+	Vector<Attribute> parameterStack = (Vector<Attribute>)((Object[]) argument)[3];
+	String feature = (String) ((Object[])argument)[4];
+%>
+
+layer model<%=feature%>;
+
+refines class <%=f.getName() %>Facade {
+
+<%
+	for(Attribute a: atts){
+		if(a.getFeature().compareTo("")!=0 && a.getFeature() != null){
+%>	
+	private <%=a.getType() %> <%=a.getName() %>;
+<%
+		}
+	}
+	
+	if(atts.size()>0){
+%>
+
+	public void <%=f.getName() %>FacadeConstructor(Object[] o){
+<%
+	int i = parameterStack.size();
+	if(i != 0){
+%>
+		Super(Object[]).<%=f.getName() %>Constructor(o);
+<%
+	}
+
+	for(Attribute a: atts){
+%>
+		this.<%=a.getName() %> = (<%=a.getType() %>) o[<%=i %>];
+<%
+		parameterStack.add(a);
+		i++;
+	}
+%>		
+	}
+<%
+	}
+
+	for(Attribute a: atts){
+		String attrName = (""+ a.getName().charAt(0)).toUpperCase() + a.getName().substring(1,a.getName().length());
+%>	
+	
+	public <%=a.getType() %> get<%=attrName %>(){ return this.<%=a.getName() %>; }
+	
+	public void set<%=attrName %>(<%=a.getType() %> <%=a.getName() %>){
+		this.<%=a.getName() %> = <%=a.getName() %>;
+	}
+<%
+	}
+	
+	for(Operation o: ops){
+		Vector<Parameter> parameters = o.getParameters();
+%>
+	
+	public <%=o.getType() %> <%=o.getName() %>(<% for(Parameter p: parameters){ %><%=p.getType() +" "+ p.getName() %><%if(p.getName() != ((Parameter) parameters.lastElement()).getName()){ %>, <%} }%>)
+	{
+		// TODO
+	}
+<%
+	}
+%>
+}
+
+

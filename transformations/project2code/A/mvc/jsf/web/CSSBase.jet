@@ -1,0 +1,38 @@
+<%@ jet package="cartridge.A.jee.jsf.web" class="JSPBase" imports="cartridge.A.jee.jsf.* java.util.* java.io.* core.mvc.view.* core.fieldtype.* " %>
+
+#HeaderLink {
+}
+
+#HeaderTitle {
+	font-size: 30px;
+}
+
+#MainMenu ul {
+	list-style: none;
+	float: left;
+	width: 100%;	
+}
+
+#MainMenu li {
+	display: inline;
+}
+
+#Footer {
+	text-align: center;
+	font-size: 8px;	
+}
+
+form table {
+	width: 100%;
+}
+
+label {
+	float: left;
+	width: 150px;
+	font-size: 12px;
+}
+
+th {
+	font-size: 12px;
+	font-weight: bold;
+}

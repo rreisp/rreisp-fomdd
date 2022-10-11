@@ -1,0 +1,25 @@
+package controller.action;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.repository.*;
+import model.action.*;
+import model.*;
+
+public class VerifyCatalogFormAction implements ControllerAction {
+
+    @Override
+    public void execute(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			ServletContext context = request.getSession().getServletContext();
+			
+			// TODO This part you'll need to write by hand. Sorry!
+			// Do all processing steps (save, update) here
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

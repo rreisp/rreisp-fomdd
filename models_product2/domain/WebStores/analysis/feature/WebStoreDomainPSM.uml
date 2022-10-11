@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:FeatureModeling="http:///schemas/FeatureModeling/_oXCkIF-AEd6h7ZCWdxNErg/23" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/FeatureModeling/_oXCkIF-AEd6h7ZCWdxNErg/23 ../../../../../metamodels/interactive/analysis/feature/FeatureModeling.profile.uml#_oXG1kF-AEd6h7ZCWdxNErg">
+  <uml:Model xmi:id="_wlGVQF-BEd6h7ZCWdxNErg" name="WebStore">
+    <packagedElement xmi:type="uml:Class" xmi:id="_RebfcNPFEd66MdSDQncWFw" name="WebStore"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_V1vd8NPFEd66MdSDQncWFw" name="OperationalPlatform"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kHxZINPFEd66MdSDQncWFw" name="Persistence"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oq17sNPFEd66MdSDQncWFw" name="JavaDB"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xd-v0NPGEd6Giq7hMqvZVw" name="JEE"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_1QibcNPGEd6Giq7hMqvZVw" memberEnd="_1QjCgNPGEd6Giq7hMqvZVw _1QjpkNPGEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_1QjCgNPGEd6Giq7hMqvZVw" name="src" type="_RebfcNPFEd66MdSDQncWFw" association="_1QibcNPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1QjCgtPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1QjCgdPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_1QjpkNPGEd6Giq7hMqvZVw" name="dst" type="_kHxZINPFEd66MdSDQncWFw" association="_1QibcNPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1QjpktPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1QjpkdPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5uHaANPGEd6Giq7hMqvZVw" memberEnd="_5uHaAdPGEd6Giq7hMqvZVw _5uIBEtPGEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_5uHaAdPGEd6Giq7hMqvZVw" name="src" type="_RebfcNPFEd66MdSDQncWFw" association="_5uHaANPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5uIBEdPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5uIBENPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5uIBEtPGEd6Giq7hMqvZVw" name="dst" type="_V1vd8NPFEd66MdSDQncWFw" association="_5uHaANPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5uIoINPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5uIBE9PGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6lgVANPGEd6Giq7hMqvZVw" memberEnd="_6lgVAdPGEd6Giq7hMqvZVw _6lg8EtPGEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_6lgVAdPGEd6Giq7hMqvZVw" name="src" type="_V1vd8NPFEd66MdSDQncWFw" association="_6lgVANPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6lg8EdPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6lg8ENPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_6lg8EtPGEd6Giq7hMqvZVw" name="dst" type="_xd-v0NPGEd6Giq7hMqvZVw" association="_6lgVANPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6lhjINPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6lg8E9PGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7D46INPGEd6Giq7hMqvZVw" memberEnd="_7D46IdPGEd6Giq7hMqvZVw _7D5hMtPGEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_7D46IdPGEd6Giq7hMqvZVw" name="src" type="_kHxZINPFEd66MdSDQncWFw" association="_7D46INPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7D5hMdPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7D5hMNPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_7D5hMtPGEd6Giq7hMqvZVw" name="dst" type="_oq17sNPFEd66MdSDQncWFw" association="_7D46INPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7D5hNNPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7D5hM9PGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_73NNcNPGEd6Giq7hMqvZVw" name="JSF"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_-1u0ENPGEd6Giq7hMqvZVw" memberEnd="_-1u0EdPGEd6Giq7hMqvZVw _-1vbIdPGEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_-1u0EdPGEd6Giq7hMqvZVw" name="src" type="_xd-v0NPGEd6Giq7hMqvZVw" association="_-1u0ENPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-1vbINPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-1u0EtPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_-1vbIdPGEd6Giq7hMqvZVw" name="dst" type="_73NNcNPGEd6Giq7hMqvZVw" association="_-1u0ENPGEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-1wCMNPGEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-1vbItPGEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MzLUcNPJEd6Giq7hMqvZVw" name="PHP"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_OLnHANPJEd6Giq7hMqvZVw" memberEnd="_OLnHAdPJEd6Giq7hMqvZVw _OLnuEtPJEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_OLnHAdPJEd6Giq7hMqvZVw" name="src" type="_V1vd8NPFEd66MdSDQncWFw" association="_OLnHANPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OLnuEdPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OLnuENPJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_OLnuEtPJEd6Giq7hMqvZVw" name="dst" type="_MzLUcNPJEd6Giq7hMqvZVw" association="_OLnHANPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OLoVINPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OLnuE9PJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Q6ZogNPJEd6Giq7hMqvZVw" name="PHP4"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RvuuANPJEd6Giq7hMqvZVw" name="PHP5"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VI4bINPJEd6Giq7hMqvZVw" memberEnd="_VI4bIdPJEd6Giq7hMqvZVw _VI5CMtPJEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_VI4bIdPJEd6Giq7hMqvZVw" name="src" type="_MzLUcNPJEd6Giq7hMqvZVw" association="_VI4bINPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VI5CMdPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VI5CMNPJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_VI5CMtPJEd6Giq7hMqvZVw" name="dst" type="_RvuuANPJEd6Giq7hMqvZVw" association="_VI4bINPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VI5CNNPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VI5CM9PJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VnZjINPJEd6Giq7hMqvZVw" memberEnd="_VnZjIdPJEd6Giq7hMqvZVw _VnaKMdPJEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_VnZjIdPJEd6Giq7hMqvZVw" name="src" type="_MzLUcNPJEd6Giq7hMqvZVw" association="_VnZjINPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VnaKMNPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VnZjItPJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_VnaKMdPJEd6Giq7hMqvZVw" name="dst" type="_Q6ZogNPJEd6Giq7hMqvZVw" association="_VnZjINPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VnaKM9PJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VnaKMtPJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9933oNPJEd6Giq7hMqvZVw" name="MySQL"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="__-qqsNPJEd6Giq7hMqvZVw" memberEnd="__-qqsdPJEd6Giq7hMqvZVw __-rRwtPJEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="__-qqsdPJEd6Giq7hMqvZVw" name="src" type="_kHxZINPFEd66MdSDQncWFw" association="__-qqsNPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__-rRwdPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__-rRwNPJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="__-rRwtPJEd6Giq7hMqvZVw" name="dst" type="_9933oNPJEd6Giq7hMqvZVw" association="__-qqsNPJEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__-r40NPJEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__-rRw9PJEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kEdNINPKEd6Giq7hMqvZVw" name="Struts"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_lfBtsNPKEd6Giq7hMqvZVw" memberEnd="_lfBtsdPKEd6Giq7hMqvZVw _lfCUwtPKEd6Giq7hMqvZVw">
+      <ownedEnd xmi:id="_lfBtsdPKEd6Giq7hMqvZVw" name="src" type="_xd-v0NPGEd6Giq7hMqvZVw" association="_lfBtsNPKEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lfCUwdPKEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lfCUwNPKEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_lfCUwtPKEd6Giq7hMqvZVw" name="dst" type="_kEdNINPKEd6Giq7hMqvZVw" association="_lfBtsNPKEd6Giq7hMqvZVw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lfC70dPKEd6Giq7hMqvZVw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lfC70NPKEd6Giq7hMqvZVw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_A6qDoBJZEd-l9utsBQ-7jw">
+      <eAnnotations xmi:id="_A6qqsBJZEd-l9utsBQ-7jw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../../../../metamodels/interactive/analysis/feature/FeatureModeling.profile.uml#_oXG1kF-AEd6h7ZCWdxNErg"/>
+      </eAnnotations>
+      <appliedProfile href="../../../../../metamodels/interactive/analysis/feature/FeatureModeling.profile.uml#_VQRcEIQdEd2UwvjNw25BAg"/>
+    </profileApplication>
+  </uml:Model>
+  <FeatureModeling:Concept xmi:id="_AhkZAF-CEd6h7ZCWdxNErg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_Vuzy0F-CEd6h7ZCWdxNErg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WkjvEF-CEd6h7ZCWdxNErg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_XX1mIF-CEd6h7ZCWdxNErg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_Xy6YkF-CEd6h7ZCWdxNErg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_aEs1AF-CEd6h7ZCWdxNErg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_7txcYF-NEd6h7ZCWdxNErg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_8VOd8F-NEd6h7ZCWdxNErg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_9vW5oF-NEd6h7ZCWdxNErg"/>
+  <FeatureModeling:_11 xmi:id="_-a_3oF-NEd6h7ZCWdxNErg"/>
+  <FeatureModeling:OptionalFeature xmi:id="__amTcF-NEd6h7ZCWdxNErg"/>
+  <FeatureModeling:OptionalFeature xmi:id="__2u10F-NEd6h7ZCWdxNErg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_2fvdYF_yEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_3erK0F_yEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_4EWDsF_yEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_5kYTEF_yEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_-K8OgF_yEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_-ulHEF_yEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="__1oOsF_yEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_AQCSwF_zEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_AzeXAF_zEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_BIVzwF_zEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_BlKSoF_zEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_YLxSIF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_Y2j7kF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_kBzsAF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_kcigMF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_k1d9kF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_nOzzgF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_nwngEF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_oInwYF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:_1 xmi:id="_oxNaYF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_pey5IF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_p3cCoF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_qSOhMF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_qmmOsF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_0GB9kF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_2Gs00F_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_2kVzEF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_4Ra_8F_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_4siOoF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_5KkOcF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_5wIZoF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_7VsCMF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_7wcEgF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_8WxEsF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_8_obgF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_9njXIF_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_-O5D8F_-Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_C1whYF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_DQPd8F__Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_GnPO8F__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_HuVZ4F__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_IzZkgF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_P11sgF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_ewGFUF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_fhj-gF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_gES4IF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_g96nwF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_h9wUIF__Ed6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_VFq6gGAXEd6vX9de80iOGw"/>
+  <FeatureModeling:_0 xmi:id="_y0Hq8GAYEd6vX9de80iOGw"/>
+  <FeatureModeling:_0 xmi:id="_NXSAkGAZEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_-BZJwGAaEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_De5UQGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_IeYtEGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_NzzSkGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_PCCAQGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_QcH_sGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_RNw4AGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:_1 xmi:id="_RnzIoGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_cNFFQGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:_11 xmi:id="_d0V-AGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:_1 xmi:id="_fq3awGAbEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_mfvn4GAbEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_hfwN4GAdEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_rDRLgGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_rh62YGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_sIRrwGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:_11 xmi:id="_uvZfAGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_yT0oAGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_yruxsGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_48jPgGAdEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_Utzv8GAeEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_lrO6YGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:_1 xmi:id="_myJfIGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_nPwoMGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_sAo9QGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_xNZWAGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_xnkwkGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_yC_hQGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_ybx0sGAeEd6vX9de80iOGw"/>
+  <FeatureModeling:requires xmi:id="_xRVrwGAnEd6vX9de80iOGw"/>
+  <FeatureModeling:requires xmi:id="_UaEwEGAoEd6vX9de80iOGw"/>
+  <FeatureModeling:_1 xmi:id="_z_W7wGAoEd6vX9de80iOGw"/>
+  <FeatureModeling:_01 xmi:id="_3oTEcGBAEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_-PQxYGBAEd6Oz7C8cbaytg"/>
+  <FeatureModeling:_01 xmi:id="_-7-tcGBAEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_VtZ20GBBEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_dyfuoGBBEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_hW4bYGBBEd6Oz7C8cbaytg"/>
+  <FeatureModeling:_01 xmi:id="_v-QUcGBBEd6Oz7C8cbaytg"/>
+  <FeatureModeling:_01 xmi:id="_xR4fgGBBEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_VoQmMGBDEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WqOZgGBDEd6Oz7C8cbaytg"/>
+  <FeatureModeling:_01 xmi:id="_YEuooGBDEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_fR5kgGBEEd6Oz7C8cbaytg"/>
+  <FeatureModeling:_01 xmi:id="_jDvecGBEEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_kQdJMGBEEd6Oz7C8cbaytg"/>
+  <FeatureModeling:requires xmi:id="_xVTfkGBEEd6Oz7C8cbaytg"/>
+  <FeatureModeling:requires xmi:id="_yhzH4GBEEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_0e0_0GBFEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_0979sGBFEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_AG6dQGBGEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_1AWGkGBHEd6Oz7C8cbaytg"/>
+  <FeatureModeling:_11 xmi:id="_2NrcYGBHEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_BPwpwGBIEd6Oz7C8cbaytg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_PR3SkGBIEd6Oz7C8cbaytg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_BbDawGJsEd65ZeLscUJbLg"/>
+  <FeatureModeling:_1 xmi:id="_BzQfYGJsEd65ZeLscUJbLg"/>
+  <FeatureModeling:influences xmi:id="_v6fp4GJyEd65ZeLscUJbLg"/>
+  <FeatureModeling:influences xmi:id="_S9QhsGJ2Ed65ZeLscUJbLg"/>
+  <FeatureModeling:OptionalFeature xmi:id="_vYEOEGJ5Ed65ZeLscUJbLg"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_nYMfUKK1Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_ofW7sKK1Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_pZ7tkKK1Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_p4OMEKK1Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_q4pHQKK1Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_rvvuYKK1Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_CvoKgKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_Qp4e4KK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_S0t-wKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WIVEkKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WjYo4KK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_XAFL8KK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_XhJ4sKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_X5MlQKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_YSHbkKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_YqQ10KK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_ZF63EKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_Z8pqwKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_a31goKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_bNpYkKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_bhVwoKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_cYroUKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_cy7UUKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_d-kBAKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_ewsBgKK2Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_jL3hcKK4Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_juNZgKK4Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_kaIrYKK4Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_e0n-8KK5Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_gxjlsKK5Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_7sRqQKK6Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_8VV1YKK6Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WpamIKK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_XEkREKK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_XdaO4KK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_X_538KK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_wOlCcKK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_yAOmQKK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_2eEDgKK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_3briUKK7Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_Cx3-gKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_HSmXsKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_HtaEYKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_ZWQxcKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:Concept xmi:id="_l_b4cKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_xyrdAKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_yZqkgKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_y9cnAKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_zaS7EKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_0ZCbQKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_1ebWAKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_7dbEAKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_76WQkKK8Ed6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_hdOUsKLAEd6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_iDecYKLAEd6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_i_jqIKLAEd6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_lGtj4KLAEd6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_mTZZcKLAEd6OpuWDWR6s3w"/>
+  <FeatureModeling:OptionalFeature xmi:id="_mx8WoKLAEd6OpuWDWR6s3w"/>
+  <FeatureModeling:_11 xmi:id="_JA3eEKLBEd6OpuWDWR6s3w"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_iMC0gKbcEd6to5gtfpJWlg"/>
+  <FeatureModeling:Concept xmi:id="_UZsWsNPFEd66MdSDQncWFw" base_Class="_RebfcNPFEd66MdSDQncWFw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_jWXxYNPFEd66MdSDQncWFw" base_Class="_V1vd8NPFEd66MdSDQncWFw"/>
+  <FeatureModeling:MandatoryFeature xmi:id="_n5L1QNPFEd66MdSDQncWFw" base_Class="_kHxZINPFEd66MdSDQncWFw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_wOW7ANPGEd6Giq7hMqvZVw" base_Class="_oq17sNPFEd66MdSDQncWFw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_zOd2ANPGEd6Giq7hMqvZVw" base_Class="_xd-v0NPGEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_94kBMNPGEd6Giq7hMqvZVw" base_Class="_73NNcNPGEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_EqhdMNPHEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_3RvzUNPIEd6Giq7hMqvZVw"/>
+  <FeatureModeling:_11 xmi:id="_DfzroNPJEd6Giq7hMqvZVw" base_Class="_73NNcNPGEd6Giq7hMqvZVw"/>
+  <FeatureModeling:_11 xmi:id="_E0N50NPJEd6Giq7hMqvZVw" base_Class="_kHxZINPFEd66MdSDQncWFw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_PR-5MNPJEd6Giq7hMqvZVw" base_Class="_MzLUcNPJEd6Giq7hMqvZVw"/>
+  <FeatureModeling:_11 xmi:id="_QapKYNPJEd6Giq7hMqvZVw" base_Class="_MzLUcNPJEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WCMowNPJEd6Giq7hMqvZVw" base_Class="_Q6ZogNPJEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_WcIywNPJEd6Giq7hMqvZVw" base_Class="_RvuuANPJEd6Giq7hMqvZVw"/>
+  <FeatureModeling:_11 xmi:id="_ZCZDUNPJEd6Giq7hMqvZVw" base_Class="_V1vd8NPFEd66MdSDQncWFw"/>
+  <FeatureModeling:_11 xmi:id="_7qk_UNPJEd6Giq7hMqvZVw" base_Class="_xd-v0NPGEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="__ZFRYNPJEd6Giq7hMqvZVw" base_Class="_9933oNPJEd6Giq7hMqvZVw"/>
+  <FeatureModeling:OptionalFeature xmi:id="_lDbW0NPKEd6Giq7hMqvZVw" base_Class="_kEdNINPKEd6Giq7hMqvZVw"/>
+</xmi:XMI>

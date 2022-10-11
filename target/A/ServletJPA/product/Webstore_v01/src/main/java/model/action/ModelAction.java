@@ -1,0 +1,12 @@
+
+package model.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public interface ModelAction {
+
+    Object execute(HttpServletRequest request, HttpServletResponse response);
+
+    void setParams(HttpServletRequest request);
+}
