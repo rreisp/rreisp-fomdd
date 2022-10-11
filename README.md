@@ -1,2 +1,2 @@
 # rreisp-fomdd
-Feature Oriented Model Driven Revisited
+Feature Oriented Model Driven Development Revisited
